@@ -40,7 +40,7 @@ class TestGenShader(unittest.TestCase):
     def test_ShaderInterface(self):
         doc = mx.createDocument()
 
-        searchPath = os.path.join(_fileDir, "../../libraries")
+        searchPath = os.path.join(_fileDir, "../libraries")
         libraryPath = os.path.join(searchPath, "stdlib")
         _loadLibraries(doc, searchPath, libraryPath)
 
@@ -68,9 +68,9 @@ class TestGenShader(unittest.TestCase):
         output.setConnectedNode(mult1)
 
         doc.addNode("foo", "foo1", "color3")
-        output = doc.addOutput("foo_test", "color3");
-        output.setNodeName("foo1");
-        output.setAttribute("output", "o");
+        output = doc.addOutput("foo_test", "color3")
+        output.setNodeName("foo1")
+        output.setAttribute("output", "o")
 
         shadergen = OslShaderGenerator.create()
         context = GenContext(shadergen)
@@ -81,12 +81,12 @@ class TestGenShader(unittest.TestCase):
 
         print(mx.writeToXmlString(doc))
         # Test complete mode
-        context.getOptions().shaderInterfaceType = int(ShaderInterfaceType.SHADER_INTERFACE_COMPLETE);
-        shader = shadergen.generate(exampleName, output, context);
+        context.getOptions().shaderInterfaceType = int(ShaderInterfaceType.SHADER_INTERFACE_COMPLETE)
+        shader = shadergen.generate(exampleName, output, context)
         self.assertTrue(shader)
         self.assertTrue(len(shader.getSourceCode(PIXEL_STAGE)) > 0)
 
-        ps = shader.getStage(PIXEL_STAGE);
+        ps = shader.getStage(PIXEL_STAGE)
         uniforms = ps.getUniformBlock(OSL_UNIFORMS)
         self.assertTrue(uniforms.size() == 2)
 
@@ -99,12 +99,12 @@ class TestGenShader(unittest.TestCase):
         file.close()
         #os.remove(shader.getName() + "_complete.osl");
 
-        context.getOptions().shaderInterfaceType = int(ShaderInterfaceType.SHADER_INTERFACE_REDUCED);
-        shader = shadergen.generate(exampleName, output, context);
+        context.getOptions().shaderInterfaceType = int(ShaderInterfaceType.SHADER_INTERFACE_REDUCED)
+        shader = shadergen.generate(exampleName, output, context)
         self.assertTrue(shader)
         self.assertTrue(len(shader.getSourceCode(PIXEL_STAGE)) > 0)
 
-        ps = shader.getStage(PIXEL_STAGE);
+        ps = shader.getStage(PIXEL_STAGE)
         uniforms = ps.getUniformBlock(OSL_UNIFORMS)
         self.assertTrue(uniforms.size() == 0)
 

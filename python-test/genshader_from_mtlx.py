@@ -22,7 +22,6 @@ def _loadLibrary(file, doc):
     libDoc = mx.createDocument()
     _readFromXmlFile(libDoc, file)
     libDoc.setSourceUri(file)
-    print file
     doc.importLibrary(libDoc)
 
 def _loadLibraries(doc, searchPath, libraryPath):
@@ -46,31 +45,11 @@ class TestGenShader(unittest.TestCase):
 
         exampleName = u"shader_interface"
 
-        # Create a nodedef taking three color3 and producing another color3
-        nodeDef = doc.addNodeDef("ND_foo", "color3", "foo")
-        fooInputA = nodeDef.addInput("a", "color3")
-        fooInputB = nodeDef.addInput("b", "color3")
-        fooOutput = nodeDef.addOutput("o", "color3")
-        fooInputA.setValue(mx.Color3(1.0, 1.0, 0.0))
-        fooInputB.setValue(mx.Color3(0.8, 0.1, 0.1))
+        exampleShaderFile = os.path.join(_fileDir, "test_shader.mtlx")
+        _readFromXmlFile(doc, exampleShaderFile)
 
-        # Create an implementation graph for the nodedef performing
-        # a multiplication of the three colors.
-        nodeGraph = doc.addNodeGraph("IMP_foo")
-        nodeGraph.setAttribute("nodedef", nodeDef.getName())
-
-        output = nodeGraph.addOutput(fooOutput.getName(), "color3")
-        mult1 = nodeGraph.addNode("multiply", "mult1", "color3")
-        in1 = mult1.addInput("in1", "color3")
-        in1.setInterfaceName(fooInputA.getName())
-        in2 = mult1.addInput("in2", "color3")
-        in2.setInterfaceName(fooInputB.getName())
-        output.setConnectedNode(mult1)
-
-        doc.addNode("foo", "foo1", "color3")
-        output = doc.addOutput("foo_test", "color3")
-        output.setNodeName("foo1")
-        output.setAttribute("output", "o")
+        outputs = doc.getOutputs()
+        output = next(iter(outputs))
 
         shadergen = OslShaderGenerator.create()
         context = GenContext(shadergen)

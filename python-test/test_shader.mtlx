@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<materialx version="1.36">
+  <nodedef name="ND_foo" type="color3" node="foo">
+    <input name="a" type="color3" value="1, 1, 0" />
+    <input name="b" type="color3" value="0.8, 0.1, 0.1" />
+    <output name="o" type="color3" />
+  </nodedef>
+  <nodegraph name="IMP_foo" nodedef="ND_foo">
+    <output name="o" type="color3" nodename="mult1" />
+    <multiply name="mult1" type="color3">
+      <input name="in1" type="color3" interfacename="a" />
+      <input name="in2" type="color3" interfacename="b" />
+    </multiply>
+  </nodegraph>
+  <foo name="foo1" type="color3" />
+  <output name="foo_test" type="color3" nodename="foo1" output="o" />
+</materialx>

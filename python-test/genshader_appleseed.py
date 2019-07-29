@@ -2,9 +2,10 @@ import os
 import unittest
 
 import MaterialX as mx
-from MaterialX.PyMaterialXGenShader import *
+import MaterialX.PyMaterialXGenShader as genshader
 
-from MaterialX.PyMaterialXGenOsl import OslShaderGenerator, OSL_UNIFORMS, OSL_OUTPUTS
+import MaterialX.PyMaterialXGenOsl as genosl
+
 _fileDir = os.path.dirname(os.path.abspath(__file__))
 
 def _getSubDirectories(libraryPath):
@@ -16,11 +17,9 @@ def _getMTLXFilesInDirectory(path):
         if file.endswith(".mtlx"):
             yield file
 
-_readFromXmlFile = mx.readFromXmlFileBase
-
 def _loadLibrary(file, doc):
     libDoc = mx.createDocument()
-    _readFromXmlFile(libDoc, file)
+    mx.readFromXmlFileBase(libDoc, file)
     libDoc.setSourceUri(file)
     doc.importLibrary(libDoc)
 
@@ -45,10 +44,8 @@ class TestGenShader(unittest.TestCase):
         libraryPath = os.path.join(searchPath, "appleseed")
         _loadLibraries(doc, libraryPath)
 
-        exampleName = u"shader_interface"
-
         exampleShaderFile = os.path.join(_fileDir, "test_material_appleseed.mtlx")
-        _readFromXmlFile(doc, exampleShaderFile)
+        mx.readFromXmlFileBase(doc, exampleShaderFile)
 
         materials = doc.getMaterials()
         material = next(iter(materials))
@@ -59,9 +56,11 @@ class TestGenShader(unittest.TestCase):
                 if shaderRef is None:
                     return
 
-        shadergen = OslShaderGenerator.create()
-        print(dir(shadergen))
-        context = GenContext(shadergen)
+        # shaderName = material.getPrimaryShaderName()
+        shaderRefName = shaderRef.getName()
+
+        shadergen = genosl.OslShaderGenerator.create()
+        context = genshader.GenContext(shadergen)
         # Add path to find all source code snippets
         context.registerSourceCodeSearchPath(mx.FilePath(searchPath))
         # Add path to find OSL include files
@@ -70,23 +69,16 @@ class TestGenShader(unittest.TestCase):
 
         print(mx.writeToXmlString(doc))
         # Test complete mode
-        context.getOptions().shaderInterfaceType = int(ShaderInterfaceType.SHADER_INTERFACE_COMPLETE)
-        shader = shadergen.generate(exampleName, shaderRef, context)
+        # context.getOptions().shaderInterfaceType = int(ShaderInterfaceType.SHADER_INTERFACE_COMPLETE)
+        context.getOptions().shaderInterfaceType = int(genshader.ShaderInterfaceType.SHADER_INTERFACE_REDUCED)
+
+        shader = shadergen.generate(shaderRefName, shaderRef, context)
         self.assertTrue(shader)
-        self.assertTrue(len(shader.getSourceCode(PIXEL_STAGE)) > 0)
+        self.assertTrue(len(shader.getSourceCode(genshader.PIXEL_STAGE)) > 0)
 
-        ps = shader.getStage(PIXEL_STAGE)
-        uniforms = ps.getUniformBlock(OSL_UNIFORMS)
-        # self.assertTrue(uniforms.size() == 2)
-
-        outputs = ps.getOutputBlock(OSL_OUTPUTS)
-        # self.assertTrue(outputs.size() == 1)
-        # self.assertTrue(outputs[0].getName() == output.getName())
-
-        file = open(shader.getName() + "_complete.osl", "w+")
-        file.write(shader.getSourceCode(PIXEL_STAGE))
+        file = open(shader.getName() + ".osl", "w+")
+        file.write(shader.getSourceCode(genshader.PIXEL_STAGE))
         file.close()
-        #os.remove(shader.getName() + "_complete.osl");
 
 if __name__ == '__main__':
     unittest.main()

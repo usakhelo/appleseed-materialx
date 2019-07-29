@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <materialx version="1.36">
-  <typedef name="closure" semantic="shader" />
-  <!-- Nodedef elements for node <as_closure2surface> -->
+  <!-- as_closure2surface -->
   <nodedef name="ND_as_closure2surface" node="as_closure2surface" type="surfaceshader">
       <input name="in_input" type="surfaceshader" uiname="Input" uifolder="surface"/>
   </nodedef>
-  <!-- Nodedef elements for node <as_double_shade> -->
+  <!-- as_double_shade -->
   <nodedef name="ND_as_double_shade" node="as_double_shade" type="surfaceshader">
       <input name="in_color" type="color3" value="1, 1, 1" uiname="Front Color"  uifolder="Color"/>
       <input name="in_color2" type="color3" value="0, 0, 0" uiname="Back Color"  uifolder="Color"/>

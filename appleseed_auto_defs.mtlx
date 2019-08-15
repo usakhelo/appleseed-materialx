@@ -1,0 +1,890 @@
+<?xml version="1.0"?>
+<materialx version="1.36">
+  <nodedef name="ND_as_anisotropy_vector_field" type="surfaceshader" node="as_anisotropy_vector_field">
+    <input name="in_rotation_angle" type="string" value="" />
+    <input name="in_color" type="string" value="" />
+    <input name="in_field_mode" type="string" value="" />
+    <input name="in_rotation_value" type="string" value="" />
+    <input name="in_rotation_mode" type="string" value="" />
+    <input name="in_normalize_output" type="string" value="" />
+    <input name="in_surface_normal" type="string" value="" />
+    <input name="Tn" type="string" value="" />
+    <input name="Bn" type="string" value="" />
+    <input name="out_anisotropy_vector" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_asc_cdl" type="surfaceshader" node="as_asc_cdl">
+    <input name="in_color" type="string" value="" />
+    <input name="in_rgb_primaries" type="string" value="" />
+    <input name="in_slope" type="string" value="" />
+    <input name="in_offset" type="string" value="" />
+    <input name="in_power" type="string" value="" />
+    <input name="in_saturation" type="string" value="" />
+    <input name="in_clamp_output" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_attributes" type="surfaceshader" node="as_attributes">
+    <input name="out_object_instance_id" type="string" value="" />
+    <input name="out_object_instance_index" type="string" value="" />
+    <input name="out_object_instance_name" type="string" value="" />
+    <input name="out_object_name" type="string" value="" />
+    <input name="out_assembly_instance_id" type="string" value="" />
+    <input name="out_assembly_name" type="string" value="" />
+    <input name="out_assembly_instance_name" type="string" value="" />
+    <input name="out_camera_resolution" type="string" value="" />
+    <input name="out_camera_resolution_x" type="string" value="" />
+    <input name="out_camera_resolution_y" type="string" value="" />
+    <input name="out_camera_projection" type="string" value="" />
+    <input name="out_camera_pixel_aspect" type="string" value="" />
+    <input name="out_camera_screen_window" type="string" value="" />
+    <input name="out_camera_screen_window_xmin" type="string" value="" />
+    <input name="out_camera_screen_window_ymin" type="string" value="" />
+    <input name="out_camera_screen_window_xmax" type="string" value="" />
+    <input name="out_camera_screen_window_ymax" type="string" value="" />
+    <input name="out_camera_fov" type="string" value="" />
+    <input name="out_camera_clip" type="string" value="" />
+    <input name="out_camera_clip_near" type="string" value="" />
+    <input name="out_camera_clip_far" type="string" value="" />
+    <input name="out_camera_shutter" type="string" value="" />
+    <input name="out_camera_shutter_open" type="string" value="" />
+    <input name="out_camera_shutter_close" type="string" value="" />
+    <input name="out_global_frame" type="string" value="" />
+    <input name="out_path_ray_depth" type="string" value="" />
+    <input name="out_path_has_ray_differentials" type="string" value="" />
+    <input name="out_path_ray_length" type="string" value="" />
+    <input name="out_path_ray_ior" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_blackbody" type="surfaceshader" node="as_blackbody">
+    <input name="in_incandescence_type" type="string" value="" />
+    <input name="in_color" type="string" value="" />
+    <input name="in_incandescence_amount" type="string" value="" />
+    <input name="in_temperature_scale" type="string" value="" />
+    <input name="in_temperature" type="string" value="" />
+    <input name="in_area_normalize_edf" type="string" value="" />
+    <input name="in_tonemap_edf" type="string" value="" />
+    <input name="in_specular_amount" type="string" value="" />
+    <input name="in_specular_roughness" type="string" value="" />
+    <input name="in_ior" type="string" value="" />
+    <input name="in_bump_normal" type="string" value="" />
+    <input name="in_enable_matte" type="string" value="" />
+    <input name="in_matte_opacity" type="string" value="" />
+    <input name="in_matte_opacity_color" type="string" value="" />
+    <input name="in_maximum_ray_depth" type="string" value="" />
+    <input name="out_color" type="string" value="" />
+    <input name="out_matte_opacity" type="string" value="" />
+    <input name="out_blackbody_color" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_blend_color" type="surfaceshader" node="as_blend_color">
+    <input name="in_color" type="string" value="" />
+    <input name="in_weight" type="string" value="" />
+    <input name="in_color2" type="string" value="" />
+    <input name="in_weight2" type="string" value="" />
+    <input name="in_blend_mode" type="string" value="" />
+    <input name="in_clamp_output" type="string" value="" />
+    <input name="out_color" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_blend_shader" type="surfaceshader" node="as_blend_shader">
+    <input name="in_color" type="string" value="" />
+    <input name="in_weight" type="string" value="" />
+    <input name="in_layer_visibility" type="string" value="" />
+    <input name="in_color1" type="string" value="" />
+    <input name="in_weight1" type="string" value="" />
+    <input name="in_layer_visibility1" type="string" value="" />
+    <input name="in_color2" type="string" value="" />
+    <input name="in_weight2" type="string" value="" />
+    <input name="in_layer_visibility2" type="string" value="" />
+    <input name="in_color3" type="string" value="" />
+    <input name="in_weight3" type="string" value="" />
+    <input name="in_layer_visibility3" type="string" value="" />
+    <input name="in_color4" type="string" value="" />
+    <input name="in_weight4" type="string" value="" />
+    <input name="in_layer_visibility4" type="string" value="" />
+    <input name="in_color5" type="string" value="" />
+    <input name="in_weight5" type="string" value="" />
+    <input name="in_layer_visibility5" type="string" value="" />
+    <input name="in_color6" type="string" value="" />
+    <input name="in_weight6" type="string" value="" />
+    <input name="in_layer_visibility6" type="string" value="" />
+    <input name="in_color7" type="string" value="" />
+    <input name="in_weight7" type="string" value="" />
+    <input name="in_layer_visibility7" type="string" value="" />
+    <input name="out_color" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_bump" type="surfaceshader" node="as_bump">
+    <input name="in_mode" type="string" value="" />
+    <input name="in_bump_value" type="string" value="" />
+    <input name="in_bump_depth" type="string" value="" />
+    <input name="in_normal_map_weight" type="string" value="" />
+    <input name="in_normal_map" type="string" value="" />
+    <input name="in_normal_map_coordsys" type="string" value="" />
+    <input name="in_normal_map_mode" type="string" value="" />
+    <input name="in_normal_map_flip_r" type="string" value="" />
+    <input name="in_normal_map_flip_g" type="string" value="" />
+    <input name="in_normal_map_swap_rg" type="string" value="" />
+    <input name="in_surface_point" type="string" value="" />
+    <input name="in_surface_normal" type="string" value="" />
+    <input name="Tn" type="string" value="" />
+    <input name="Bn" type="string" value="" />
+    <input name="out_normal" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_closure2surface" type="surfaceshader" node="as_closure2surface">
+    <input name="in_input" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_color_transform" type="surfaceshader" node="as_color_transform">
+    <input name="in_color" type="string" value="" />
+    <input name="in_inputSpace" type="string" value="" />
+    <input name="in_outputSpace" type="string" value="" />
+    <input name="in_colorProfile" type="string" value="" />
+    <input name="in_ignoreColorSpaceFileRules" type="string" value="" />
+    <input name="in_colorSpace" type="string" value="" />
+    <input name="in_workingSpace" type="string" value="" />
+    <input name="in_colorManagementEnabled" type="string" value="" />
+    <input name="in_colorManagementConfigFileEnabled" type="string" value="" />
+    <input name="in_colorManagementConfigFilePath" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_composite_color" type="surfaceshader" node="as_composite_color">
+    <input name="in_color" type="string" value="" />
+    <input name="in_alpha" type="string" value="" />
+    <input name="in_color2" type="string" value="" />
+    <input name="in_alpha2" type="string" value="" />
+    <input name="in_composite_mode" type="string" value="" />
+    <input name="in_clamp_output" type="string" value="" />
+    <input name="out_color" type="string" value="" />
+    <input name="out_alpha" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_create_mask" type="surfaceshader" node="as_create_mask">
+    <input name="in_color" type="string" value="" />
+    <input name="in_alpha" type="string" value="" />
+    <input name="in_threshold_channel" type="string" value="" />
+    <input name="in_threshold_value" type="string" value="" />
+    <input name="in_threshold_function" type="string" value="" />
+    <input name="in_threshold_contrast" type="string" value="" />
+    <input name="in_threshold_lower_bound" type="string" value="" />
+    <input name="in_threshold_upper_bound" type="string" value="" />
+    <input name="out_result" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_disney_material" type="surfaceshader" node="as_disney_material">
+    <input name="in_color" type="string" value="" />
+    <input name="in_subsurface_amount" type="string" value="" />
+    <input name="in_specular_amount" type="string" value="" />
+    <input name="in_roughness" type="string" value="" />
+    <input name="in_specular_tint" type="string" value="" />
+    <input name="in_metallic_amount" type="string" value="" />
+    <input name="in_anisotropy_amount" type="string" value="" />
+    <input name="in_anisotropy_angle" type="string" value="" />
+    <input name="in_anisotropy_vector_map" type="string" value="" />
+    <input name="in_sheen_amount" type="string" value="" />
+    <input name="in_sheen_tint" type="string" value="" />
+    <input name="in_clear_coat" type="string" value="" />
+    <input name="in_clear_coat_glossyness" type="string" value="" />
+    <input name="in_bump_normal" type="string" value="" />
+    <input name="in_enable_matte" type="string" value="" />
+    <input name="in_matte_opacity" type="string" value="" />
+    <input name="in_matte_opacity_color" type="string" value="" />
+    <input name="in_maximum_ray_depth" type="string" value="" />
+    <input name="Tn" type="string" value="" />
+    <input name="Bn" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+    <input name="out_outTransparency" type="string" value="" />
+    <input name="out_outMatteOpacity" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_double_shade" type="surfaceshader" node="as_double_shade">
+    <input name="in_color" type="string" value="" />
+    <input name="in_color2" type="string" value="" />
+    <input name="out_color" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_falloff_angle" type="surfaceshader" node="as_falloff_angle">
+    <input name="in_vector_1" type="string" value="" />
+    <input name="in_normalize_input_1" type="string" value="" />
+    <input name="in_vector_2" type="string" value="" />
+    <input name="in_normalize_input_2" type="string" value="" />
+    <input name="in_smooth_lower_bound" type="string" value="" />
+    <input name="in_smooth_upper_bound" type="string" value="" />
+    <input name="in_smooth_function" type="string" value="" />
+    <input name="out_result" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_fresnel" type="surfaceshader" node="as_fresnel">
+    <input name="in_fresnel_type" type="string" value="" />
+    <input name="in_ior" type="string" value="" />
+    <input name="in_face_tint" type="string" value="" />
+    <input name="in_edge_tint" type="string" value="" />
+    <input name="in_complex_eta" type="string" value="" />
+    <input name="in_complex_kappa" type="string" value="" />
+    <input name="in_surface_normal" type="string" value="" />
+    <input name="in_viewer_vector" type="string" value="" />
+    <input name="out_color" type="string" value="" />
+    <input name="out_alpha" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_glass" type="surfaceshader" node="as_glass">
+    <input name="in_surface_transmittance" type="string" value="" />
+    <input name="in_transmittance_amount" type="string" value="" />
+    <input name="in_reflection_tint" type="string" value="" />
+    <input name="in_refraction_tint" type="string" value="" />
+    <input name="in_ior" type="string" value="" />
+    <input name="in_distribution" type="string" value="" />
+    <input name="in_roughness" type="string" value="" />
+    <input name="in_specular_spread" type="string" value="" />
+    <input name="in_anisotropy_amount" type="string" value="" />
+    <input name="in_anisotropy_angle" type="string" value="" />
+    <input name="in_anisotropy_mode" type="string" value="" />
+    <input name="in_anisotropy_map" type="string" value="" />
+    <input name="in_anisotropy_direction" type="string" value="" />
+    <input name="in_volume_transmittance" type="string" value="" />
+    <input name="in_volume_transmittance_distance" type="string" value="" />
+    <input name="in_bump_normal" type="string" value="" />
+    <input name="in_enable_matte" type="string" value="" />
+    <input name="in_matte_opacity" type="string" value="" />
+    <input name="in_matte_opacity_color" type="string" value="" />
+    <input name="in_maximum_ray_depth" type="string" value="" />
+    <input name="Tn" type="string" value="" />
+    <input name="Bn" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+    <input name="out_outTransparency" type="string" value="" />
+    <input name="out_outMatteOpacity" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_globals" type="surfaceshader" node="as_globals">
+    <input name="Pref" type="string" value="" />
+    <input name="Nref" type="string" value="" />
+    <input name="out_world_P" type="string" value="" />
+    <input name="out_world_Pref" type="string" value="" />
+    <input name="out_world_Ps" type="string" value="" />
+    <input name="out_world_N" type="string" value="" />
+    <input name="out_world_Nref" type="string" value="" />
+    <input name="out_world_Ng" type="string" value="" />
+    <input name="out_world_I" type="string" value="" />
+    <input name="out_world_dPdu" type="string" value="" />
+    <input name="out_world_dPdv" type="string" value="" />
+    <input name="out_world_dPdx" type="string" value="" />
+    <input name="out_world_dPdy" type="string" value="" />
+    <input name="out_world_dPdz" type="string" value="" />
+    <input name="out_world_dNdu" type="string" value="" />
+    <input name="out_world_dNdv" type="string" value="" />
+    <input name="out_world_Tn" type="string" value="" />
+    <input name="out_world_Bn" type="string" value="" />
+    <input name="out_u_coord" type="string" value="" />
+    <input name="out_v_coord" type="string" value="" />
+    <input name="out_uv_coord" type="string" value="" />
+    <input name="out_time" type="string" value="" />
+    <input name="out_dtime" type="string" value="" />
+    <input name="out_world_dPdtime" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_id_manifold" type="surfaceshader" node="as_id_manifold">
+    <input name="in_manifold_type" type="string" value="" />
+    <input name="in_expression" type="string" value="" />
+    <input name="in_domain" type="string" value="" />
+    <input name="in_seed" type="string" value="" />
+    <input name="in_output_mode" type="string" value="" />
+    <input name="out_outHash" type="string" value="" />
+    <input name="out_outID" type="string" value="" />
+    <input name="out_outGreyscale" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_invert_color" type="surfaceshader" node="as_invert_color">
+    <input name="in_color" type="string" value="" />
+    <input name="in_color_model" type="string" value="" />
+    <input name="in_invert_channel_x" type="string" value="" />
+    <input name="in_invert_channel_y" type="string" value="" />
+    <input name="in_invert_channel_z" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_luminance" type="surfaceshader" node="as_luminance">
+    <input name="in_color" type="string" value="" />
+    <input name="in_deriveFromMayaCMS" type="string" value="" />
+    <input name="in_inputColorSpace" type="string" value="" />
+    <input name="in_chromaticityCoordsR" type="string" value="" />
+    <input name="in_chromaticityCoordsG" type="string" value="" />
+    <input name="in_chromaticityCoordsB" type="string" value="" />
+    <input name="in_inputIlluminants" type="string" value="" />
+    <input name="in_colorTemperature" type="string" value="" />
+    <input name="in_chromaticityCoordsW" type="string" value="" />
+    <input name="in_colorProfile" type="string" value="" />
+    <input name="in_ignoreColorSpaceFileRules" type="string" value="" />
+    <input name="in_colorSpace" type="string" value="" />
+    <input name="in_workingSpace" type="string" value="" />
+    <input name="in_colorManagementEnabled" type="string" value="" />
+    <input name="in_colorManagementConfigFileEnabled" type="string" value="" />
+    <input name="in_colorManagementConfigFilePath" type="string" value="" />
+    <input name="out_result" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_manifold2D" type="surfaceshader" node="as_manifold2D">
+    <input name="in_uv_coord" type="string" value="" />
+    <input name="in_uv_filter_size" type="string" value="" />
+    <input name="in_bypass_uv" type="string" value="" />
+    <input name="in_compute_filters" type="string" value="" />
+    <input name="in_scale_frame" type="string" value="" />
+    <input name="in_translate_frame" type="string" value="" />
+    <input name="in_rotate_frame" type="string" value="" />
+    <input name="in_frame_center" type="string" value="" />
+    <input name="in_wrap_mode_u" type="string" value="" />
+    <input name="in_wrap_mode_v" type="string" value="" />
+    <input name="in_uv_tiles" type="string" value="" />
+    <input name="in_offset_tiles" type="string" value="" />
+    <input name="in_rotate_tiles" type="string" value="" />
+    <input name="in_tiles_center" type="string" value="" />
+    <input name="in_tiles_coverage" type="string" value="" />
+    <input name="in_mirror_u" type="string" value="" />
+    <input name="in_mirror_v" type="string" value="" />
+    <input name="in_wrap_u" type="string" value="" />
+    <input name="in_wrap_v" type="string" value="" />
+    <input name="in_stagger_uv" type="string" value="" />
+    <input name="in_swap_uv" type="string" value="" />
+    <input name="in_noise_uv" type="string" value="" />
+    <input name="out_uvcoord" type="string" value="" />
+    <input name="out_uvcoord_filter" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_matte" type="surfaceshader" node="as_matte">
+    <input name="in_color" type="string" value="" />
+    <input name="in_enable_matte" type="string" value="" />
+    <input name="in_matte_opacity" type="string" value="" />
+    <input name="in_matte_opacity_color" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+    <input name="out_outMatteOpacity" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_metal" type="surfaceshader" node="as_metal">
+    <input name="in_face_reflectance" type="string" value="" />
+    <input name="in_edge_reflectance" type="string" value="" />
+    <input name="in_distribution" type="string" value="" />
+    <input name="in_roughness" type="string" value="" />
+    <input name="in_energy_compensation" type="string" value="" />
+    <input name="in_anisotropy_amount" type="string" value="" />
+    <input name="in_anisotropy_angle" type="string" value="" />
+    <input name="in_anisotropy_mode" type="string" value="" />
+    <input name="in_anisotropy_map" type="string" value="" />
+    <input name="in_anisotropy_direction" type="string" value="" />
+    <input name="in_bump_normal" type="string" value="" />
+    <input name="in_enable_matte" type="string" value="" />
+    <input name="in_matte_opacity" type="string" value="" />
+    <input name="in_matte_opacity_color" type="string" value="" />
+    <input name="in_maximum_ray_depth" type="string" value="" />
+    <input name="Tn" type="string" value="" />
+    <input name="Bn" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+    <input name="out_outMatteOpacity" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_noise2d" type="surfaceshader" node="as_noise2d">
+    <input name="in_color1" type="string" value="" />
+    <input name="in_color2" type="string" value="" />
+    <input name="in_contrast" type="string" value="" />
+    <input name="in_type" type="string" value="" />
+    <input name="in_intensity" type="string" value="" />
+    <input name="in_frequency_x" type="string" value="" />
+    <input name="in_frequency_y" type="string" value="" />
+    <input name="in_ridges" type="string" value="" />
+    <input name="in_inflection" type="string" value="" />
+    <input name="in_signed_noise" type="string" value="" />
+    <input name="in_animated_noise" type="string" value="" />
+    <input name="in_frame_time" type="string" value="" />
+    <input name="in_time_scale" type="string" value="" />
+    <input name="in_periodic" type="string" value="" />
+    <input name="in_period_x" type="string" value="" />
+    <input name="in_period_y" type="string" value="" />
+    <input name="in_period_time" type="string" value="" />
+    <input name="in_smoothness" type="string" value="" />
+    <input name="in_jittering" type="string" value="" />
+    <input name="in_anisotropy" type="string" value="" />
+    <input name="in_direction" type="string" value="" />
+    <input name="in_bandwidth" type="string" value="" />
+    <input name="in_impulses" type="string" value="" />
+    <input name="in_filter_noise" type="string" value="" />
+    <input name="in_amplitude" type="string" value="" />
+    <input name="in_octaves" type="string" value="" />
+    <input name="in_cascade_mode" type="string" value="" />
+    <input name="in_lacunarity" type="string" value="" />
+    <input name="in_offset" type="string" value="" />
+    <input name="in_noise_gain" type="string" value="" />
+    <input name="in_distortion" type="string" value="" />
+    <input name="in_uvCoord" type="string" value="" />
+    <input name="in_uvFilterSize" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+    <input name="out_outAlpha" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_noise3d" type="surfaceshader" node="as_noise3d">
+    <input name="in_color1" type="string" value="" />
+    <input name="in_color2" type="string" value="" />
+    <input name="in_contrast" type="string" value="" />
+    <input name="in_type" type="string" value="" />
+    <input name="in_intensity" type="string" value="" />
+    <input name="in_frequency" type="string" value="" />
+    <input name="in_ridges" type="string" value="" />
+    <input name="in_inflection" type="string" value="" />
+    <input name="in_signed_noise" type="string" value="" />
+    <input name="in_animated_noise" type="string" value="" />
+    <input name="in_frame_time" type="string" value="" />
+    <input name="in_time_scale" type="string" value="" />
+    <input name="in_periodic" type="string" value="" />
+    <input name="in_period" type="string" value="" />
+    <input name="in_period_time" type="string" value="" />
+    <input name="in_smoothness" type="string" value="" />
+    <input name="in_jittering" type="string" value="" />
+    <input name="in_anisotropy" type="string" value="" />
+    <input name="in_direction" type="string" value="" />
+    <input name="in_bandwidth" type="string" value="" />
+    <input name="in_impulses" type="string" value="" />
+    <input name="in_filter_noise" type="string" value="" />
+    <input name="in_amplitude" type="string" value="" />
+    <input name="in_octaves" type="string" value="" />
+    <input name="in_cascade_mode" type="string" value="" />
+    <input name="in_lacunarity" type="string" value="" />
+    <input name="in_offset" type="string" value="" />
+    <input name="in_noise_gain" type="string" value="" />
+    <input name="in_distortion" type="string" value="" />
+    <input name="in_refPointCamera" type="string" value="" />
+    <input name="in_placementMatrix" type="string" value="" />
+    <input name="in_wrap" type="string" value="" />
+    <input name="in_local" type="string" value="" />
+    <input name="in_blend" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+    <input name="out_outAlpha" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_plastic" type="surfaceshader" node="as_plastic">
+    <input name="in_color" type="string" value="" />
+    <input name="in_diffuse_weight" type="string" value="" />
+    <input name="in_scattering" type="string" value="" />
+    <input name="in_specular_color" type="string" value="" />
+    <input name="in_specular_weight" type="string" value="" />
+    <input name="in_ior" type="string" value="" />
+    <input name="in_distribution" type="string" value="" />
+    <input name="in_specular_roughness" type="string" value="" />
+    <input name="in_specular_spread" type="string" value="" />
+    <input name="in_bump_normal" type="string" value="" />
+    <input name="in_transparency" type="string" value="" />
+    <input name="in_enable_matte" type="string" value="" />
+    <input name="in_matte_opacity" type="string" value="" />
+    <input name="in_matte_opacity_color" type="string" value="" />
+    <input name="in_maximum_ray_depth" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+    <input name="out_outTransparency" type="string" value="" />
+    <input name="out_outMatteOpacity" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_ray_switch" type="surfaceshader" node="as_ray_switch">
+    <input name="in_color" type="string" value="" />
+    <input name="in_color_light" type="string" value="" />
+    <input name="in_color_shadow" type="string" value="" />
+    <input name="in_color_transparency" type="string" value="" />
+    <input name="in_color_diffuse" type="string" value="" />
+    <input name="in_color_glossy" type="string" value="" />
+    <input name="in_color_specular" type="string" value="" />
+    <input name="in_color_subsurface" type="string" value="" />
+    <input name="out_color" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_sbs_pbrmaterial" type="surfaceshader" node="as_sbs_pbrmaterial">
+    <input name="in_ambientOcclusion" type="string" value="" />
+    <input name="in_baseColor" type="string" value="" />
+    <input name="in_emissiveColor" type="string" value="" />
+    <input name="in_emissiveIntensity" type="string" value="" />
+    <input name="in_height" type="string" value="" />
+    <input name="in_heightScale" type="string" value="" />
+    <input name="in_metallic" type="string" value="" />
+    <input name="in_normal" type="string" value="" />
+    <input name="in_roughness" type="string" value="" />
+    <input name="in_opacity" type="string" value="" />
+    <input name="in_specularLevel" type="string" value="" />
+    <input name="in_anisotropyLevel" type="string" value="" />
+    <input name="in_anisotropyAngle" type="string" value="" />
+    <input name="in_refraction" type="string" value="" />
+    <input name="in_refractionIOR" type="string" value="" />
+    <input name="in_scattering" type="string" value="" />
+    <input name="in_absorption" type="string" value="" />
+    <input name="in_absorptionColor" type="string" value="" />
+    <input name="in_enable_matte" type="string" value="" />
+    <input name="in_matte_opacity" type="string" value="" />
+    <input name="in_matte_opacity_color" type="string" value="" />
+    <input name="in_maximum_ray_depth" type="string" value="" />
+    <input name="Tn" type="string" value="" />
+    <input name="Bn" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+    <input name="out_outTransparency" type="string" value="" />
+    <input name="out_outMatteOpacity" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_space_transform" type="surfaceshader" node="as_space_transform">
+    <input name="in_point" type="string" value="" />
+    <input name="in_normal" type="string" value="" />
+    <input name="in_vector" type="string" value="" />
+    <input name="in_from_space" type="string" value="" />
+    <input name="in_to_space" type="string" value="" />
+    <input name="in_normalize_vectors" type="string" value="" />
+    <input name="out_transformed_point" type="string" value="" />
+    <input name="out_transformed_normal" type="string" value="" />
+    <input name="out_transformed_vector" type="string" value="" />
+    <input name="out_transform_matrix" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_standard_surface" type="surfaceshader" node="as_standard_surface">
+    <input name="in_diffuse_weight" type="string" value="" />
+    <input name="in_color" type="string" value="" />
+    <input name="in_diffuse_roughness" type="string" value="" />
+    <input name="in_subsurface_weight" type="string" value="" />
+    <input name="in_sss_mfp" type="string" value="" />
+    <input name="in_sss_mfp_scale" type="string" value="" />
+    <input name="in_subsurface_profile" type="string" value="" />
+    <input name="in_sss_maximum_ray_depth" type="string" value="" />
+    <input name="in_sss_threshold" type="string" value="" />
+    <input name="in_translucency_weight" type="string" value="" />
+    <input name="in_translucency_color" type="string" value="" />
+    <input name="in_specular_color" type="string" value="" />
+    <input name="in_specular_roughness" type="string" value="" />
+    <input name="in_specular_spread" type="string" value="" />
+    <input name="in_fresnel_type" type="string" value="" />
+    <input name="in_ior" type="string" value="" />
+    <input name="in_face_tint" type="string" value="" />
+    <input name="in_edge_tint" type="string" value="" />
+    <input name="in_anisotropy_amount" type="string" value="" />
+    <input name="in_anisotropy_angle" type="string" value="" />
+    <input name="in_anisotropy_map" type="string" value="" />
+    <input name="in_refraction_amount" type="string" value="" />
+    <input name="in_refraction_tint" type="string" value="" />
+    <input name="in_absorption_depth" type="string" value="" />
+    <input name="in_absorption_color" type="string" value="" />
+    <input name="in_coating_reflectivity" type="string" value="" />
+    <input name="in_coating_roughness" type="string" value="" />
+    <input name="in_coating_ior" type="string" value="" />
+    <input name="in_coating_depth" type="string" value="" />
+    <input name="in_coating_absorption" type="string" value="" />
+    <input name="in_incandescence_amount" type="string" value="" />
+    <input name="in_incandescence_type" type="string" value="" />
+    <input name="in_incandescence_color" type="string" value="" />
+    <input name="in_temperature" type="string" value="" />
+    <input name="in_area_normalize_edf" type="string" value="" />
+    <input name="in_tonemap_edf" type="string" value="" />
+    <input name="in_transparency" type="string" value="" />
+    <input name="in_bump_normal_coating" type="string" value="" />
+    <input name="in_bump_normal_substrate" type="string" value="" />
+    <input name="in_enable_matte" type="string" value="" />
+    <input name="in_matte_opacity" type="string" value="" />
+    <input name="in_matte_opacity_color" type="string" value="" />
+    <input name="in_maximum_ray_depth" type="string" value="" />
+    <input name="Tn" type="string" value="" />
+    <input name="Bn" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+    <input name="out_outTransparency" type="string" value="" />
+    <input name="out_outMatteOpacity" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_subsurface" type="surfaceshader" node="as_subsurface">
+    <input name="in_sss_profile" type="string" value="" />
+    <input name="in_color" type="string" value="" />
+    <input name="in_sss_amount" type="string" value="" />
+    <input name="in_sss_mfp" type="string" value="" />
+    <input name="in_sss_mfp_scale" type="string" value="" />
+    <input name="in_sss_maximum_ray_depth" type="string" value="" />
+    <input name="in_ior" type="string" value="" />
+    <input name="in_fresnel_weight" type="string" value="" />
+    <input name="in_specular_weight" type="string" value="" />
+    <input name="in_specular_roughness" type="string" value="" />
+    <input name="in_anisotropy_amount" type="string" value="" />
+    <input name="in_anisotropy_angle" type="string" value="" />
+    <input name="in_anisotropy_mode" type="string" value="" />
+    <input name="in_anisotropy_map" type="string" value="" />
+    <input name="in_anisotropy_direction" type="string" value="" />
+    <input name="in_bump_normal" type="string" value="" />
+    <input name="in_enable_matte" type="string" value="" />
+    <input name="in_matte_opacity" type="string" value="" />
+    <input name="in_matte_opacity_color" type="string" value="" />
+    <input name="Tn" type="string" value="" />
+    <input name="Bn" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+    <input name="out_outMatteOpacity" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_switch_surface" type="surfaceshader" node="as_switch_surface">
+    <input name="in_color" type="string" value="" />
+    <input name="in_color1" type="string" value="" />
+    <input name="in_color2" type="string" value="" />
+    <input name="in_color3" type="string" value="" />
+    <input name="in_color4" type="string" value="" />
+    <input name="in_color5" type="string" value="" />
+    <input name="in_color6" type="string" value="" />
+    <input name="in_color7" type="string" value="" />
+    <input name="in_cycle_mode" type="string" value="" />
+    <input name="in_connected_slots_only" type="string" value="" />
+    <input name="in_manifold_type" type="string" value="" />
+    <input name="in_expression" type="string" value="" />
+    <input name="in_domain" type="string" value="" />
+    <input name="in_seed" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_switch_texture" type="surfaceshader" node="as_switch_texture">
+    <input name="in_color" type="string" value="" />
+    <input name="in_color1" type="string" value="" />
+    <input name="in_color2" type="string" value="" />
+    <input name="in_color3" type="string" value="" />
+    <input name="in_color4" type="string" value="" />
+    <input name="in_color5" type="string" value="" />
+    <input name="in_color6" type="string" value="" />
+    <input name="in_color7" type="string" value="" />
+    <input name="in_cycle_mode" type="string" value="" />
+    <input name="in_manifold_type" type="string" value="" />
+    <input name="in_expression" type="string" value="" />
+    <input name="in_domain" type="string" value="" />
+    <input name="in_seed" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_swizzle" type="surfaceshader" node="as_swizzle">
+    <input name="in_color" type="string" value="" />
+    <input name="in_alpha" type="string" value="" />
+    <input name="in_red_channel" type="string" value="" />
+    <input name="in_green_channel" type="string" value="" />
+    <input name="in_blue_channel" type="string" value="" />
+    <input name="in_alpha_channel" type="string" value="" />
+    <input name="in_invert_red" type="string" value="" />
+    <input name="in_invert_green" type="string" value="" />
+    <input name="in_invert_blue" type="string" value="" />
+    <input name="in_invert_alpha" type="string" value="" />
+    <input name="in_vector" type="string" value="" />
+    <input name="in_x_channel" type="string" value="" />
+    <input name="in_y_channel" type="string" value="" />
+    <input name="in_z_channel" type="string" value="" />
+    <input name="in_invert_x" type="string" value="" />
+    <input name="in_invert_y" type="string" value="" />
+    <input name="in_invert_z" type="string" value="" />
+    <input name="out_color" type="string" value="" />
+    <input name="out_alpha" type="string" value="" />
+    <input name="out_vector" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_texture" type="surfaceshader" node="as_texture">
+    <input name="in_filename" type="string" value="" />
+    <input name="in_atlas_type" type="string" value="" />
+    <input name="in_color" type="string" value="" />
+    <input name="in_alpha" type="string" value="" />
+    <input name="in_starting_channel" type="string" value="" />
+    <input name="in_s_blur_amount" type="string" value="" />
+    <input name="in_t_blur_amount" type="string" value="" />
+    <input name="in_s_filter_width" type="string" value="" />
+    <input name="in_t_filter_width" type="string" value="" />
+    <input name="in_s_wrap" type="string" value="" />
+    <input name="in_t_wrap" type="string" value="" />
+    <input name="in_interpolation_method" type="string" value="" />
+    <input name="in_enable_cms" type="string" value="" />
+    <input name="in_eotf" type="string" value="" />
+    <input name="in_rgb_primaries" type="string" value="" />
+    <input name="in_workingspace_rgb_primaries" type="string" value="" />
+    <input name="in_texture_coords" type="string" value="" />
+    <input name="in_texture_coords_filter" type="string" value="" />
+    <input name="out_color" type="string" value="" />
+    <input name="out_alpha" type="string" value="" />
+    <input name="out_channel" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_texture2surface" type="surfaceshader" node="as_texture2surface">
+    <input name="in_color" type="string" value="" />
+    <input name="in_scalar" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_texture3d" type="surfaceshader" node="as_texture3d">
+    <input name="in_filename" type="string" value="" />
+    <input name="in_starting_channel" type="string" value="" />
+    <input name="in_color" type="string" value="" />
+    <input name="in_channel_fill" type="string" value="" />
+    <input name="in_time" type="string" value="" />
+    <input name="in_s_wrap" type="string" value="" />
+    <input name="in_t_wrap" type="string" value="" />
+    <input name="in_r_wrap" type="string" value="" />
+    <input name="in_s_blur" type="string" value="" />
+    <input name="in_t_blur" type="string" value="" />
+    <input name="in_r_blur" type="string" value="" />
+    <input name="in_s_width" type="string" value="" />
+    <input name="in_t_width" type="string" value="" />
+    <input name="in_r_width" type="string" value="" />
+    <input name="in_surface_point" type="string" value="" />
+    <input name="in_coordsys" type="string" value="" />
+    <input name="in_placement_matrix" type="string" value="" />
+    <input name="out_color" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_texture_info" type="surfaceshader" node="as_texture_info">
+    <input name="in_texture_file" type="string" value="" />
+    <input name="out_average_color" type="string" value="" />
+    <input name="out_average_alpha" type="string" value="" />
+    <input name="out_resolution" type="string" value="" />
+    <input name="out_num_channels" type="string" value="" />
+    <input name="out_num_subimages" type="string" value="" />
+    <input name="out_texture_type" type="string" value="" />
+    <input name="out_texture_format" type="string" value="" />
+    <input name="out_data_window_min" type="string" value="" />
+    <input name="out_data_window_max" type="string" value="" />
+    <input name="out_display_window_min" type="string" value="" />
+    <input name="out_display_window_max" type="string" value="" />
+    <input name="out_world_to_camera" type="string" value="" />
+    <input name="out_world_to_screen" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_toon" type="surfaceshader" node="as_toon">
+    <input name="in_incandescence_weight" type="string" value="" />
+    <input name="in_incandescence_attenuation" type="string" value="" />
+    <input name="in_incandescence_tint" type="string" value="" />
+    <input name="in_edf_blend_mode" type="string" value="" />
+    <input name="in_edf_dark_color" type="string" value="" />
+    <input name="in_edf_dark_level" type="string" value="" />
+    <input name="in_edf_midtone_color" type="string" value="" />
+    <input name="in_edf_midtone_level" type="string" value="" />
+    <input name="in_edf_bright_color" type="string" value="" />
+    <input name="in_edf_softness" type="string" value="" />
+    <input name="in_incandescence_area_normalize" type="string" value="" />
+    <input name="in_diffuse_weight" type="string" value="" />
+    <input name="in_diffuse_tint" type="string" value="" />
+    <input name="in_diffuse_blend_mode" type="string" value="" />
+    <input name="in_shadow_color" type="string" value="" />
+    <input name="in_shadow_level" type="string" value="" />
+    <input name="in_midtone_color" type="string" value="" />
+    <input name="in_midtone_level" type="string" value="" />
+    <input name="in_highlight_color" type="string" value="" />
+    <input name="in_diffuse_softness" type="string" value="" />
+    <input name="in_diffuse_ray_depth" type="string" value="" />
+    <input name="in_specular_weight" type="string" value="" />
+    <input name="in_specular_roughness" type="string" value="" />
+    <input name="in_ior" type="string" value="" />
+    <input name="in_anisotropy_amount" type="string" value="" />
+    <input name="in_anisotropy_angle" type="string" value="" />
+    <input name="in_anisotropy_mode" type="string" value="" />
+    <input name="in_anisotropy_map" type="string" value="" />
+    <input name="in_anisotropy_direction" type="string" value="" />
+    <input name="in_specular_tint" type="string" value="" />
+    <input name="in_specular_blend_mode" type="string" value="" />
+    <input name="in_glossy_color" type="string" value="" />
+    <input name="in_glossy_level" type="string" value="" />
+    <input name="in_glossy_softness" type="string" value="" />
+    <input name="in_facing_attenuation" type="string" value="" />
+    <input name="in_specular_ray_depth" type="string" value="" />
+    <input name="in_rim_weight" type="string" value="" />
+    <input name="in_rim_tint" type="string" value="" />
+    <input name="in_rim_blend_mode" type="string" value="" />
+    <input name="in_rim_softness" type="string" value="" />
+    <input name="in_bump_normal" type="string" value="" />
+    <input name="in_specular_normal" type="string" value="" />
+    <input name="in_normal_control" type="string" value="" />
+    <input name="in_transparency" type="string" value="" />
+    <input name="in_contour_color" type="string" value="" />
+    <input name="in_contour_opacity" type="string" value="" />
+    <input name="in_contour_width" type="string" value="" />
+    <input name="in_contour_object" type="string" value="" />
+    <input name="in_contour_material" type="string" value="" />
+    <input name="in_contour_occlusion" type="string" value="" />
+    <input name="in_contour_creases" type="string" value="" />
+    <input name="in_occlusion_threshold" type="string" value="" />
+    <input name="in_crease_threshold" type="string" value="" />
+    <input name="in_enable_matte" type="string" value="" />
+    <input name="in_matte_opacity" type="string" value="" />
+    <input name="in_matte_opacity_color" type="string" value="" />
+    <input name="Tn" type="string" value="" />
+    <input name="Bn" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+    <input name="out_outTransparency" type="string" value="" />
+    <input name="out_outMatteOpacity" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_triplanar" type="surfaceshader" node="as_triplanar">
+    <input name="in_blend_mode" type="string" value="" />
+    <input name="in_blend_softness" type="string" value="" />
+    <input name="in_surface_point" type="string" value="" />
+    <input name="in_space" type="string" value="" />
+    <input name="in_normal" type="string" value="" />
+    <input name="in_placement_matrix" type="string" value="" />
+    <input name="in_enable_cms" type="string" value="" />
+    <input name="in_workingspace_rgb_primaries" type="string" value="" />
+    <input name="in_x_axis_color" type="string" value="" />
+    <input name="in_x_axis_filename" type="string" value="" />
+    <input name="in_x_axis_width" type="string" value="" />
+    <input name="in_x_axis_height" type="string" value="" />
+    <input name="in_x_axis_horizontal_offset" type="string" value="" />
+    <input name="in_x_axis_vertical_offset" type="string" value="" />
+    <input name="in_x_axis_rotation_angle" type="string" value="" />
+    <input name="in_x_axis_swrap" type="string" value="" />
+    <input name="in_x_axis_twrap" type="string" value="" />
+    <input name="in_x_axis_sflip" type="string" value="" />
+    <input name="in_x_axis_tflip" type="string" value="" />
+    <input name="in_x_tex_eotf" type="string" value="" />
+    <input name="in_x_tex_rgb_primaries" type="string" value="" />
+    <input name="in_y_axis_color" type="string" value="" />
+    <input name="in_y_axis_filename" type="string" value="" />
+    <input name="in_y_axis_width" type="string" value="" />
+    <input name="in_y_axis_height" type="string" value="" />
+    <input name="in_y_axis_horizontal_offset" type="string" value="" />
+    <input name="in_y_axis_vertical_offset" type="string" value="" />
+    <input name="in_y_axis_rotation_angle" type="string" value="" />
+    <input name="in_y_axis_swrap" type="string" value="" />
+    <input name="in_y_axis_twrap" type="string" value="" />
+    <input name="in_y_axis_sflip" type="string" value="" />
+    <input name="in_y_axis_tflip" type="string" value="" />
+    <input name="in_y_tex_eotf" type="string" value="" />
+    <input name="in_y_tex_rgb_primaries" type="string" value="" />
+    <input name="in_z_axis_color" type="string" value="" />
+    <input name="in_z_axis_filename" type="string" value="" />
+    <input name="in_z_axis_width" type="string" value="" />
+    <input name="in_z_axis_height" type="string" value="" />
+    <input name="in_z_axis_horizontal_offset" type="string" value="" />
+    <input name="in_z_axis_vertical_offset" type="string" value="" />
+    <input name="in_z_axis_rotation_angle" type="string" value="" />
+    <input name="in_z_axis_swrap" type="string" value="" />
+    <input name="in_z_axis_twrap" type="string" value="" />
+    <input name="in_z_axis_sflip" type="string" value="" />
+    <input name="in_z_axis_tflip" type="string" value="" />
+    <input name="in_z_tex_eotf" type="string" value="" />
+    <input name="in_z_tex_rgb_primaries" type="string" value="" />
+    <input name="in_randomization" type="string" value="" />
+    <input name="in_manifold" type="string" value="" />
+    <input name="out_color" type="string" value="" />
+    <input name="out_alpha" type="string" value="" />
+    <input name="out_normal" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_vary_color" type="surfaceshader" node="as_vary_color">
+    <input name="in_color" type="string" value="" />
+    <input name="in_color_mode" type="string" value="" />
+    <input name="in_manifold_type" type="string" value="" />
+    <input name="in_expression" type="string" value="" />
+    <input name="in_domain" type="string" value="" />
+    <input name="in_seed" type="string" value="" />
+    <input name="in_variation_mode" type="string" value="" />
+    <input name="in_vary_hue" type="string" value="" />
+    <input name="in_vary_saturation" type="string" value="" />
+    <input name="in_vary_value" type="string" value="" />
+    <input name="in_vary_red" type="string" value="" />
+    <input name="in_vary_green" type="string" value="" />
+    <input name="in_vary_blue" type="string" value="" />
+    <input name="in_vary_lstar" type="string" value="" />
+    <input name="in_vary_astar" type="string" value="" />
+    <input name="in_vary_bstar" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+    <input name="out_outHash" type="string" value="" />
+    <input name="out_outID" type="string" value="" />
+    <input name="out_outGreyscale" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_voronoi2d" type="surfaceshader" node="as_voronoi2d">
+    <input name="in_color1" type="string" value="" />
+    <input name="in_color2" type="string" value="" />
+    <input name="in_contrast" type="string" value="" />
+    <input name="in_density" type="string" value="" />
+    <input name="in_jittering" type="string" value="" />
+    <input name="in_metric" type="string" value="" />
+    <input name="in_Minkowski_p" type="string" value="" />
+    <input name="in_coverage" type="string" value="" />
+    <input name="in_featuresMode" type="string" value="" />
+    <input name="in_amplitude" type="string" value="" />
+    <input name="in_octaves" type="string" value="" />
+    <input name="in_lacunarity" type="string" value="" />
+    <input name="in_persistence" type="string" value="" />
+    <input name="in_uvCoord" type="string" value="" />
+    <input name="in_uvFilterSize" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+    <input name="out_outAlpha" type="string" value="" />
+    <input name="out_outFeatures" type="string" value="" />
+    <input name="out_outPositions" type="string" value="" />
+    <input name="out_outIDs" type="string" value="" />
+  </nodedef>
+  <nodedef name="ND_as_voronoi3d" type="surfaceshader" node="as_voronoi3d">
+    <input name="in_color1" type="string" value="" />
+    <input name="in_color2" type="string" value="" />
+    <input name="in_contrast" type="string" value="" />
+    <input name="in_density" type="string" value="" />
+    <input name="in_jittering" type="string" value="" />
+    <input name="in_metric" type="string" value="" />
+    <input name="in_Minkowski_p" type="string" value="" />
+    <input name="in_coverage" type="string" value="" />
+    <input name="in_featuresMode" type="string" value="" />
+    <input name="in_amplitude" type="string" value="" />
+    <input name="in_octaves" type="string" value="" />
+    <input name="in_lacunarity" type="string" value="" />
+    <input name="in_persistence" type="string" value="" />
+    <input name="in_softEdges" type="string" value="" />
+    <input name="in_placementMatrix" type="string" value="" />
+    <input name="in_surfacePoint" type="string" value="" />
+    <input name="in_wrap" type="string" value="" />
+    <input name="in_local" type="string" value="" />
+    <input name="in_blend" type="string" value="" />
+    <input name="out_outColor" type="string" value="" />
+    <input name="out_outAlpha" type="string" value="" />
+    <input name="out_outFeatures" type="string" value="" />
+    <input name="out_outPositions" type="string" value="" />
+    <input name="out_outIDs" type="string" value="" />
+  </nodedef>
+</materialx>

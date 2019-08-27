@@ -14,6 +14,8 @@ os.environ['PATH'] += os.pathsep + 'C:\\plugins\\appleseed\\appleseed\\sandbox\\
 import appleseed as asr
 
 oso_shaders_dir = 'C:\\plugins\\appleseed\\appleseed\\sandbox\\shaders\\appleseed'
+osl_shaders_dir = 'C:\\plugins\\appleseed\\appleseed\\src\\appleseed.shaders\\src\\appleseed'
+osl_include_dir = 'C:\\plugins\\appleseed\\appleseed\\src\\appleseed.shaders\\include'
 
 def check_multioutput(query):
     
@@ -74,12 +76,6 @@ def add_ports(nodeDef, query):
 
 
 def generate_appleseed_nodedefs():
-    # for each file in appleseed osl library
-    # generate nodedef
-    # add it to command appleseed_defs.mtlx file
-    # in each library folder (appleseed, maya, max etc) drop the _impl.mtlx file
-    # which will refer osl shaders in that folder
-
     doc = mx.createDocument()
     
     # Add library includes
@@ -100,5 +96,29 @@ def generate_appleseed_nodedefs():
     outfile = 'appleseed_auto_defs.mtlx'
     mx.writeToXmlFile(doc, outfile)
 
+def generate_appleseed_impls():
+    doc = mx.createDocument()
+
+    for root, dir, files in os.walk(osl_shaders_dir):
+        for file in files:
+            if file.endswith('.osl'):
+                filename = os.path.join(root, file)
+                name = os.path.basename(os.path.splitext(file)[0])
+                # Create a implementation node
+                nodeImpl = doc.addImplementation('IM_%s' % name)
+                nodeImpl.setFile(filename)
+                nodeImpl.setFunction(name)
+                nodeImpl.setLanguage('genosl')
+                nodeImpl.setNodeDefString('ND_%s' % name)
+
+    outfile = 'appleseed_auto_impls.mtlx'
+    mx.writeToXmlFile(doc, outfile)
+
 if __name__ == '__main__':
+    # for each file in appleseed osl library
+    # generate nodedef
+    # add it to command appleseed_defs.mtlx file
+    # in each library folder (appleseed, maya, max etc) drop the _impl.mtlx file
+    # which will refer osl shaders in that folder
     generate_appleseed_nodedefs()
+    generate_appleseed_impls()

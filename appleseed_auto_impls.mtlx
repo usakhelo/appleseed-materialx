@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<materialx version="1.36">
+  <implementation name="IM_as_anisotropy_vector_field" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_anisotropy_vector_field.osl" function="as_anisotropy_vector_field" language="genosl" nodedef="ND_as_anisotropy_vector_field" />
+  <implementation name="IM_as_asc_cdl" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_asc_cdl.osl" function="as_asc_cdl" language="genosl" nodedef="ND_as_asc_cdl" />
+  <implementation name="IM_as_attributes" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_attributes.osl" function="as_attributes" language="genosl" nodedef="ND_as_attributes" />
+  <implementation name="IM_as_blackbody" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_blackbody.osl" function="as_blackbody" language="genosl" nodedef="ND_as_blackbody" />
+  <implementation name="IM_as_blend_color" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_blend_color.osl" function="as_blend_color" language="genosl" nodedef="ND_as_blend_color" />
+  <implementation name="IM_as_blend_shader" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_blend_shader.osl" function="as_blend_shader" language="genosl" nodedef="ND_as_blend_shader" />
+  <implementation name="IM_as_bump" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_bump.osl" function="as_bump" language="genosl" nodedef="ND_as_bump" />
+  <implementation name="IM_as_closure2surface" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_closure2surface.osl" function="as_closure2surface" language="genosl" nodedef="ND_as_closure2surface" />
+  <implementation name="IM_as_color_transform" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_color_transform.osl" function="as_color_transform" language="genosl" nodedef="ND_as_color_transform" />
+  <implementation name="IM_as_composite_color" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_composite_color.osl" function="as_composite_color" language="genosl" nodedef="ND_as_composite_color" />
+  <implementation name="IM_as_create_mask" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_create_mask.osl" function="as_create_mask" language="genosl" nodedef="ND_as_create_mask" />
+  <implementation name="IM_as_disney_material" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_disney_material.osl" function="as_disney_material" language="genosl" nodedef="ND_as_disney_material" />
+  <implementation name="IM_as_double_shade" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_double_shade.osl" function="as_double_shade" language="genosl" nodedef="ND_as_double_shade" />
+  <implementation name="IM_as_falloff_angle" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_falloff_angle.osl" function="as_falloff_angle" language="genosl" nodedef="ND_as_falloff_angle" />
+  <implementation name="IM_as_fresnel" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_fresnel.osl" function="as_fresnel" language="genosl" nodedef="ND_as_fresnel" />
+  <implementation name="IM_as_glass" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_glass.osl" function="as_glass" language="genosl" nodedef="ND_as_glass" />
+  <implementation name="IM_as_globals" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_globals.osl" function="as_globals" language="genosl" nodedef="ND_as_globals" />
+  <implementation name="IM_as_id_manifold" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_id_manifold.osl" function="as_id_manifold" language="genosl" nodedef="ND_as_id_manifold" />
+  <implementation name="IM_as_invert_color" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_invert_color.osl" function="as_invert_color" language="genosl" nodedef="ND_as_invert_color" />
+  <implementation name="IM_as_luminance" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_luminance.osl" function="as_luminance" language="genosl" nodedef="ND_as_luminance" />
+  <implementation name="IM_as_manifold2d" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_manifold2d.osl" function="as_manifold2d" language="genosl" nodedef="ND_as_manifold2d" />
+  <implementation name="IM_as_matte" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_matte.osl" function="as_matte" language="genosl" nodedef="ND_as_matte" />
+  <implementation name="IM_as_metal" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_metal.osl" function="as_metal" language="genosl" nodedef="ND_as_metal" />
+  <implementation name="IM_as_noise2d" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_noise2d.osl" function="as_noise2d" language="genosl" nodedef="ND_as_noise2d" />
+  <implementation name="IM_as_noise3d" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_noise3d.osl" function="as_noise3d" language="genosl" nodedef="ND_as_noise3d" />
+  <implementation name="IM_as_plastic" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_plastic.osl" function="as_plastic" language="genosl" nodedef="ND_as_plastic" />
+  <implementation name="IM_as_ray_switch" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_ray_switch.osl" function="as_ray_switch" language="genosl" nodedef="ND_as_ray_switch" />
+  <implementation name="IM_as_sbs_pbrmaterial" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_sbs_pbrmaterial.osl" function="as_sbs_pbrmaterial" language="genosl" nodedef="ND_as_sbs_pbrmaterial" />
+  <implementation name="IM_as_space_transform" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_space_transform.osl" function="as_space_transform" language="genosl" nodedef="ND_as_space_transform" />
+  <implementation name="IM_as_standard_surface" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_standard_surface.osl" function="as_standard_surface" language="genosl" nodedef="ND_as_standard_surface" />
+  <implementation name="IM_as_subsurface" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_subsurface.osl" function="as_subsurface" language="genosl" nodedef="ND_as_subsurface" />
+  <implementation name="IM_as_switch_surface" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_switch_surface.osl" function="as_switch_surface" language="genosl" nodedef="ND_as_switch_surface" />
+  <implementation name="IM_as_switch_texture" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_switch_texture.osl" function="as_switch_texture" language="genosl" nodedef="ND_as_switch_texture" />
+  <implementation name="IM_as_swizzle" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_swizzle.osl" function="as_swizzle" language="genosl" nodedef="ND_as_swizzle" />
+  <implementation name="IM_as_texture" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_texture.osl" function="as_texture" language="genosl" nodedef="ND_as_texture" />
+  <implementation name="IM_as_texture2surface" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_texture2surface.osl" function="as_texture2surface" language="genosl" nodedef="ND_as_texture2surface" />
+  <implementation name="IM_as_texture3d" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_texture3d.osl" function="as_texture3d" language="genosl" nodedef="ND_as_texture3d" />
+  <implementation name="IM_as_texture_info" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_texture_info.osl" function="as_texture_info" language="genosl" nodedef="ND_as_texture_info" />
+  <implementation name="IM_as_toon" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_toon.osl" function="as_toon" language="genosl" nodedef="ND_as_toon" />
+  <implementation name="IM_as_triplanar" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_triplanar.osl" function="as_triplanar" language="genosl" nodedef="ND_as_triplanar" />
+  <implementation name="IM_as_vary_color" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_vary_color.osl" function="as_vary_color" language="genosl" nodedef="ND_as_vary_color" />
+  <implementation name="IM_as_voronoi2d" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_voronoi2d.osl" function="as_voronoi2d" language="genosl" nodedef="ND_as_voronoi2d" />
+  <implementation name="IM_as_voronoi3d" file="E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_voronoi3d.osl" function="as_voronoi3d" language="genosl" nodedef="ND_as_voronoi3d" />
+</materialx>

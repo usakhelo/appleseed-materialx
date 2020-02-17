@@ -74,7 +74,6 @@ def add_ports(nodeDef, query):
             if pvalue is not None:
                 def_input.setValue(pvalue, ptype)
 
-
 def generate_appleseed_nodedefs():
     doc = mx.createDocument()
     

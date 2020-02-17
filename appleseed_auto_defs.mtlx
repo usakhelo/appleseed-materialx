@@ -72,6 +72,22 @@
     <input name="in_clamp_output" type="integer" value="0" />
     <output name="out_color" type="color3" value="0, 0, 0" />
   </nodedef>
+  <nodedef name="ND_as_blend_normal" type="surfaceshader" node="as_blend_normal">
+    <input name="in_base_normal" type="vector3" value="0, 0, 0" />
+    <input name="in_base_normal_mode" type="string" value="Unsigned" />
+    <input name="in_base_normal_flip_r" type="integer" value="0" />
+    <input name="in_base_normal_flip_g" type="integer" value="0" />
+    <input name="in_base_normal_swap_rg" type="integer" value="0" />
+    <input name="in_detail_normal" type="vector3" value="0, 0, 0" />
+    <input name="in_detail_normal_mode" type="string" value="Unsigned" />
+    <input name="in_detail_normal_flip_r" type="integer" value="0" />
+    <input name="in_detail_normal_flip_g" type="integer" value="0" />
+    <input name="in_detail_normal_swap_rg" type="integer" value="0" />
+    <input name="in_detail_normal_weight" type="float" value="1" />
+    <input name="Tn" type="vector3" value="0, 0, 0" />
+    <input name="Bn" type="vector3" value="0, 0, 0" />
+    <output name="out_normal" type="vector3" />
+  </nodedef>
   <nodedef name="ND_as_blend_shader" type="surfaceshader" node="as_blend_shader">
     <input name="in_color" type="surfaceshader" />
     <input name="in_weight" type="float" value="1" />
@@ -207,7 +223,7 @@
   </nodedef>
   <nodedef name="ND_as_glass" type="multioutput" node="as_glass">
     <input name="in_surface_transmittance" type="color3" value="1, 1, 1" />
-    <input name="in_transmittance_amount" type="float" value="0.8" />
+    <input name="in_transmittance_amount" type="float" value="0.99" />
     <input name="in_reflection_tint" type="color3" value="1, 1, 1" />
     <input name="in_refraction_tint" type="color3" value="1, 1, 1" />
     <input name="in_ior" type="float" value="1.5" />
@@ -247,16 +263,33 @@
     <output name="out_world_dPdx" type="vector3" />
     <output name="out_world_dPdy" type="vector3" />
     <output name="out_world_dPdz" type="vector3" />
-    <output name="out_world_dNdu" type="vector3" value="0, 0, 0" />
-    <output name="out_world_dNdv" type="vector3" value="0, 0, 0" />
-    <output name="out_world_Tn" type="vector3" value="0, 0, 0" />
-    <output name="out_world_Bn" type="vector3" value="0, 0, 0" />
+    <input name="dNdu" type="vector3" value="0, 0, 0" />
+    <input name="dNdv" type="vector3" value="0, 0, 0" />
+    <output name="out_world_dNdu" type="vector3" />
+    <output name="out_world_dNdv" type="vector3" />
+    <input name="Tn" type="vector3" value="0, 0, 0" />
+    <input name="Bn" type="vector3" value="0, 0, 0" />
+    <output name="out_world_Tn" type="vector3" />
+    <output name="out_world_Bn" type="vector3" />
     <output name="out_u_coord" type="float" />
     <output name="out_v_coord" type="float" />
     <output name="out_uv_coord" type="floatarray" />
+    <input name="vertex_color" type="color3" value="1, 1, 1" />
+    <output name="out_vertex_color" type="color3" />
     <output name="out_time" type="float" />
     <output name="out_dtime" type="float" />
     <output name="out_world_dPdtime" type="vector3" />
+  </nodedef>
+  <nodedef name="ND_as_hair_material" type="surfaceshader" node="as_hair_material">
+    <input name="in_reflectance" type="color3" value="0, 0, 0" />
+    <input name="in_melanin" type="float" value="0.8" />
+    <input name="in_melanin_redness" type="float" value="0" />
+    <input name="in_eta" type="float" value="1.55" />
+    <input name="in_beta_M" type="float" value="0.3" />
+    <input name="in_beta_N" type="float" value="0.3" />
+    <input name="in_alpha" type="float" value="2" />
+    <input name="in_maximum_ray_depth" type="integer" value="100" />
+    <output name="out_outColor" type="surfaceshader" />
   </nodedef>
   <nodedef name="ND_as_id_manifold" type="multioutput" node="as_id_manifold">
     <input name="in_manifold_type" type="integer" value="0" />
@@ -440,6 +473,17 @@
     <input name="in_color_subsurface" type="color3" value="0, 0, 0" />
     <output name="out_color" type="color3" value="0, 0, 0" />
   </nodedef>
+  <nodedef name="ND_as_ray_switch_surface" type="surfaceshader" node="as_ray_switch_surface">
+    <input name="in_material_camera" type="surfaceshader" />
+    <input name="in_material_light" type="surfaceshader" />
+    <input name="in_material_shadow" type="surfaceshader" />
+    <input name="in_material_transparency" type="surfaceshader" />
+    <input name="in_material_diffuse" type="surfaceshader" />
+    <input name="in_material_glossy" type="surfaceshader" />
+    <input name="in_material_specular" type="surfaceshader" />
+    <input name="in_material_subsurface" type="surfaceshader" />
+    <output name="out_color" type="surfaceshader" />
+  </nodedef>
   <nodedef name="ND_as_sbs_pbrmaterial" type="multioutput" node="as_sbs_pbrmaterial">
     <input name="in_ambientOcclusion" type="float" value="1" />
     <input name="in_baseColor" type="color3" value="0.5, 0.5, 0.5" />
@@ -537,6 +581,7 @@
     <input name="in_sss_amount" type="float" value="1" />
     <input name="in_sss_mfp" type="color3" value="0.13, 0.69, 0.88" />
     <input name="in_sss_mfp_scale" type="float" value="1" />
+    <input name="in_volume_anisotropy" type="float" value="0" />
     <input name="in_sss_maximum_ray_depth" type="integer" value="2" />
     <input name="in_ior" type="float" value="1.41" />
     <input name="in_fresnel_weight" type="float" value="1" />
@@ -555,6 +600,29 @@
     <input name="Bn" type="vector3" value="0, 0, 0" />
     <output name="out_outColor" type="surfaceshader" />
     <output name="out_outMatteOpacity" type="surfaceshader" />
+  </nodedef>
+  <nodedef name="ND_as_surface_luminance" type="multioutput" node="as_surface_luminance">
+    <input name="in_color" type="surfaceshader" />
+    <input name="in_evaluation_mode" type="string" value="diffuse+specular" />
+    <input name="in_clamp_input" type="integer" value="0" />
+    <input name="in_clamp_output" type="integer" value="0" />
+    <input name="in_deriveFromMayaCMS" type="integer" value="1" />
+    <input name="in_inputColorSpace" type="integer" value="0" />
+    <input name="in_chromaticityCoordsR" type="floatarray" value="0.64, 0.33" />
+    <input name="in_chromaticityCoordsG" type="floatarray" value="0.3, 0.6" />
+    <input name="in_chromaticityCoordsB" type="floatarray" value="0.15, 0.06" />
+    <input name="in_inputIlluminants" type="integer" value="0" />
+    <input name="in_colorTemperature" type="integer" value="6504" />
+    <input name="in_chromaticityCoordsW" type="floatarray" value="0.3127, 0.329" />
+    <input name="in_colorProfile" type="integer" value="0" />
+    <input name="in_ignoreColorSpaceFileRules" type="integer" value="0" />
+    <input name="in_colorSpace" type="string" value="" />
+    <input name="in_workingSpace" type="string" value="" />
+    <input name="in_colorManagementEnabled" type="integer" value="0" />
+    <input name="in_colorManagementConfigFileEnabled" type="integer" value="0" />
+    <input name="in_colorManagementConfigFilePath" type="string" value="" />
+    <output name="out_result" type="float" value="0" />
+    <output name="out_color" type="surfaceshader" />
   </nodedef>
   <nodedef name="ND_as_switch_surface" type="surfaceshader" node="as_switch_surface">
     <input name="in_color" type="surfaceshader" />
@@ -757,6 +825,9 @@
     <input name="in_x_axis_twrap" type="integer" value="0" />
     <input name="in_x_axis_sflip" type="integer" value="0" />
     <input name="in_x_axis_tflip" type="integer" value="0" />
+    <input name="in_x_axis_flip_r" type="integer" value="0" />
+    <input name="in_x_axis_flip_g" type="integer" value="0" />
+    <input name="in_x_axis_swap_rg" type="integer" value="0" />
     <input name="in_x_tex_eotf" type="string" value="sRGB" />
     <input name="in_x_tex_rgb_primaries" type="string" value="sRGB/Rec.709" />
     <input name="in_y_axis_color" type="color3" value="0, 1, 0" />
@@ -770,6 +841,9 @@
     <input name="in_y_axis_twrap" type="integer" value="0" />
     <input name="in_y_axis_sflip" type="integer" value="0" />
     <input name="in_y_axis_tflip" type="integer" value="0" />
+    <input name="in_y_axis_flip_r" type="integer" value="0" />
+    <input name="in_y_axis_flip_g" type="integer" value="0" />
+    <input name="in_y_axis_swap_rg" type="integer" value="0" />
     <input name="in_y_tex_eotf" type="string" value="sRGB" />
     <input name="in_y_tex_rgb_primaries" type="string" value="sRGB/Rec.709" />
     <input name="in_z_axis_color" type="color3" value="0, 0, 1" />
@@ -783,6 +857,9 @@
     <input name="in_z_axis_twrap" type="integer" value="0" />
     <input name="in_z_axis_sflip" type="integer" value="0" />
     <input name="in_z_axis_tflip" type="integer" value="0" />
+    <input name="in_z_axis_flip_r" type="integer" value="0" />
+    <input name="in_z_axis_flip_g" type="integer" value="0" />
+    <input name="in_z_axis_swap_rg" type="integer" value="0" />
     <input name="in_z_tex_eotf" type="string" value="sRGB" />
     <input name="in_z_tex_rgb_primaries" type="string" value="sRGB/Rec.709" />
     <input name="in_randomization" type="float" value="0" />

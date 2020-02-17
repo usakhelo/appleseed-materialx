@@ -5,6 +5,7 @@
   <implementation name="IM_as_attributes" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_attributes.osl" function="as_attributes" language="genosl" nodedef="ND_as_attributes" />
   <implementation name="IM_as_blackbody" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_blackbody.osl" function="as_blackbody" language="genosl" nodedef="ND_as_blackbody" />
   <implementation name="IM_as_blend_color" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_blend_color.osl" function="as_blend_color" language="genosl" nodedef="ND_as_blend_color" />
+  <implementation name="IM_as_blend_normal" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_blend_normal.osl" function="as_blend_normal" language="genosl" nodedef="ND_as_blend_normal" />
   <implementation name="IM_as_blend_shader" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_blend_shader.osl" function="as_blend_shader" language="genosl" nodedef="ND_as_blend_shader" />
   <implementation name="IM_as_bump" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_bump.osl" function="as_bump" language="genosl" nodedef="ND_as_bump" />
   <implementation name="IM_as_closure2surface" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_closure2surface.osl" function="as_closure2surface" language="genosl" nodedef="ND_as_closure2surface" />
@@ -17,6 +18,7 @@
   <implementation name="IM_as_fresnel" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_fresnel.osl" function="as_fresnel" language="genosl" nodedef="ND_as_fresnel" />
   <implementation name="IM_as_glass" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_glass.osl" function="as_glass" language="genosl" nodedef="ND_as_glass" />
   <implementation name="IM_as_globals" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_globals.osl" function="as_globals" language="genosl" nodedef="ND_as_globals" />
+  <implementation name="IM_as_hair_material" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_hair_material.osl" function="as_hair_material" language="genosl" nodedef="ND_as_hair_material" />
   <implementation name="IM_as_id_manifold" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_id_manifold.osl" function="as_id_manifold" language="genosl" nodedef="ND_as_id_manifold" />
   <implementation name="IM_as_invert_color" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_invert_color.osl" function="as_invert_color" language="genosl" nodedef="ND_as_invert_color" />
   <implementation name="IM_as_luminance" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_luminance.osl" function="as_luminance" language="genosl" nodedef="ND_as_luminance" />
@@ -27,10 +29,12 @@
   <implementation name="IM_as_noise3d" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_noise3d.osl" function="as_noise3d" language="genosl" nodedef="ND_as_noise3d" />
   <implementation name="IM_as_plastic" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_plastic.osl" function="as_plastic" language="genosl" nodedef="ND_as_plastic" />
   <implementation name="IM_as_ray_switch" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_ray_switch.osl" function="as_ray_switch" language="genosl" nodedef="ND_as_ray_switch" />
+  <implementation name="IM_as_ray_switch_surface" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_ray_switch_surface.osl" function="as_ray_switch_surface" language="genosl" nodedef="ND_as_ray_switch_surface" />
   <implementation name="IM_as_sbs_pbrmaterial" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_sbs_pbrmaterial.osl" function="as_sbs_pbrmaterial" language="genosl" nodedef="ND_as_sbs_pbrmaterial" />
   <implementation name="IM_as_space_transform" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_space_transform.osl" function="as_space_transform" language="genosl" nodedef="ND_as_space_transform" />
   <implementation name="IM_as_standard_surface" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_standard_surface.osl" function="as_standard_surface" language="genosl" nodedef="ND_as_standard_surface" />
   <implementation name="IM_as_subsurface" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_subsurface.osl" function="as_subsurface" language="genosl" nodedef="ND_as_subsurface" />
+  <implementation name="IM_as_surface_luminance" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_surface_luminance.osl" function="as_surface_luminance" language="genosl" nodedef="ND_as_surface_luminance" />
   <implementation name="IM_as_switch_surface" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_switch_surface.osl" function="as_switch_surface" language="genosl" nodedef="ND_as_switch_surface" />
   <implementation name="IM_as_switch_texture" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_switch_texture.osl" function="as_switch_texture" language="genosl" nodedef="ND_as_switch_texture" />
   <implementation name="IM_as_swizzle" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_swizzle.osl" function="as_swizzle" language="genosl" nodedef="ND_as_swizzle" />

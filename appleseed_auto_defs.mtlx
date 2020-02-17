@@ -12,6 +12,16 @@
     <input name="Bn" type="vector3" value="0, 0, 0" />
     <output name="out_anisotropy_vector" type="vector3" value="0, 0, 0" />
   </nodedef>
+  <nodedef name="ND_as_asc_cdl" type="surfaceshader" node="as_asc_cdl">
+    <input name="in_color" type="color3" value="0, 0, 0" />
+    <input name="in_rgb_primaries" type="string" value="sRGB/Rec.709" />
+    <input name="in_slope" type="float" value="1" />
+    <input name="in_offset" type="float" value="0" />
+    <input name="in_power" type="float" value="1" />
+    <input name="in_saturation" type="float" value="1" />
+    <input name="in_clamp_output" type="integer" value="1" />
+    <output name="out_outColor" type="color3" value="0, 0, 0" />
+  </nodedef>
   <nodedef name="ND_as_attributes" type="multioutput" node="as_attributes">
     <output name="out_object_instance_id" type="integer" value="0" />
     <output name="out_object_instance_index" type="integer" value="0" />
@@ -58,7 +68,7 @@
     <input name="in_enable_matte" type="integer" value="0" />
     <input name="in_matte_opacity" type="float" value="0" />
     <input name="in_matte_opacity_color" type="color3" value="1, 0.5, 0" />
-    <input name="in_maximum_ray_depth" type="integer" value="8" />
+    <input name="in_maximum_ray_depth" type="integer" value="100" />
     <output name="out_color" type="surfaceshader" />
     <output name="out_matte_opacity" type="surfaceshader" />
     <output name="out_blackbody_color" type="color3" value="0, 0, 0" />
@@ -187,7 +197,7 @@
     <input name="in_enable_matte" type="integer" value="0" />
     <input name="in_matte_opacity" type="float" value="0" />
     <input name="in_matte_opacity_color" type="color3" value="1, 0.5, 0" />
-    <input name="in_maximum_ray_depth" type="integer" value="4" />
+    <input name="in_maximum_ray_depth" type="integer" value="100" />
     <input name="Tn" type="vector3" value="0, 0, 0" />
     <input name="Bn" type="vector3" value="0, 0, 0" />
     <output name="out_outColor" type="surfaceshader" />
@@ -241,7 +251,7 @@
     <input name="in_enable_matte" type="integer" value="0" />
     <input name="in_matte_opacity" type="float" value="0" />
     <input name="in_matte_opacity_color" type="color3" value="1, 0.5, 0" />
-    <input name="in_maximum_ray_depth" type="integer" value="4" />
+    <input name="in_maximum_ray_depth" type="integer" value="100" />
     <input name="Tn" type="vector3" value="0, 0, 0" />
     <input name="Bn" type="vector3" value="0, 0, 0" />
     <output name="out_outColor" type="surfaceshader" />
@@ -301,6 +311,14 @@
     <output name="out_outID" type="color3" value="0, 0, 0" />
     <output name="out_outGreyscale" type="float" value="0" />
   </nodedef>
+  <nodedef name="ND_as_invert_color" type="surfaceshader" node="as_invert_color">
+    <input name="in_color" type="color3" value="0, 0, 0" />
+    <input name="in_color_model" type="string" value="RGB" />
+    <input name="in_invert_channel_x" type="integer" value="0" />
+    <input name="in_invert_channel_y" type="integer" value="0" />
+    <input name="in_invert_channel_z" type="integer" value="0" />
+    <output name="out_outColor" type="color3" value="0, 0, 0" />
+  </nodedef>
   <nodedef name="ND_as_luminance" type="surfaceshader" node="as_luminance">
     <input name="in_color" type="color3" value="0.5, 0.5, 0.5" />
     <input name="in_deriveFromMayaCMS" type="integer" value="1" />
@@ -346,6 +364,14 @@
     <output name="out_uvcoord" type="floatarray" value="0, 0" />
     <output name="out_uvcoord_filter" type="floatarray" value="-1, -1" />
   </nodedef>
+  <nodedef name="ND_as_matte" type="multioutput" node="as_matte">
+    <input name="in_color" type="surfaceshader" />
+    <input name="in_enable_matte" type="integer" value="1" />
+    <input name="in_matte_opacity" type="float" value="0" />
+    <input name="in_matte_opacity_color" type="color3" value="1, 0.5, 0" />
+    <output name="out_outColor" type="surfaceshader" />
+    <output name="out_outMatteOpacity" type="surfaceshader" />
+  </nodedef>
   <nodedef name="ND_as_metal" type="multioutput" node="as_metal">
     <input name="in_face_reflectance" type="color3" value="0.96, 0.8, 0.05" />
     <input name="in_edge_reflectance" type="color3" value="1, 1, 1" />
@@ -361,7 +387,7 @@
     <input name="in_enable_matte" type="integer" value="0" />
     <input name="in_matte_opacity" type="float" value="0" />
     <input name="in_matte_opacity_color" type="color3" value="1, 0.5, 0" />
-    <input name="in_maximum_ray_depth" type="integer" value="8" />
+    <input name="in_maximum_ray_depth" type="integer" value="100" />
     <input name="Tn" type="vector3" value="0, 0, 0" />
     <input name="Bn" type="vector3" value="0, 0, 0" />
     <output name="out_outColor" type="surfaceshader" />
@@ -457,7 +483,7 @@
     <input name="in_enable_matte" type="integer" value="0" />
     <input name="in_matte_opacity" type="float" value="0" />
     <input name="in_matte_opacity_color" type="color3" value="1, 0.5, 0" />
-    <input name="in_maximum_ray_depth" type="integer" value="4" />
+    <input name="in_maximum_ray_depth" type="integer" value="100" />
     <output name="out_outColor" type="surfaceshader" />
     <output name="out_outTransparency" type="surfaceshader" />
     <output name="out_outMatteOpacity" type="surfaceshader" />
@@ -506,7 +532,7 @@
     <input name="in_enable_matte" type="integer" value="0" />
     <input name="in_matte_opacity" type="float" value="0" />
     <input name="in_matte_opacity_color" type="color3" value="1, 0.5, 0" />
-    <input name="in_maximum_ray_depth" type="integer" value="4" />
+    <input name="in_maximum_ray_depth" type="integer" value="100" />
     <input name="Tn" type="vector3" value="0, 0, 0" />
     <input name="Bn" type="vector3" value="0, 0, 0" />
     <output name="out_outColor" type="surfaceshader" />
@@ -568,7 +594,7 @@
     <input name="in_enable_matte" type="integer" value="0" />
     <input name="in_matte_opacity" type="float" value="0" />
     <input name="in_matte_opacity_color" type="color3" value="1, 0.5, 0" />
-    <input name="in_maximum_ray_depth" type="integer" value="8" />
+    <input name="in_maximum_ray_depth" type="integer" value="100" />
     <input name="Tn" type="vector3" value="0, 0, 0" />
     <input name="Bn" type="vector3" value="0, 0, 0" />
     <output name="out_outColor" type="surfaceshader" />
@@ -582,7 +608,7 @@
     <input name="in_sss_mfp" type="color3" value="0.13, 0.69, 0.88" />
     <input name="in_sss_mfp_scale" type="float" value="1" />
     <input name="in_volume_anisotropy" type="float" value="0" />
-    <input name="in_sss_maximum_ray_depth" type="integer" value="2" />
+    <input name="in_sss_maximum_ray_depth" type="integer" value="8" />
     <input name="in_ior" type="float" value="1.41" />
     <input name="in_fresnel_weight" type="float" value="1" />
     <input name="in_specular_weight" type="float" value="1" />
@@ -763,7 +789,7 @@
     <input name="in_midtone_level" type="float" value="0.3" />
     <input name="in_highlight_color" type="color3" value="0.13, 0.28, 0.55" />
     <input name="in_diffuse_softness" type="float" value="0.05" />
-    <input name="in_diffuse_ray_depth" type="integer" value="2" />
+    <input name="in_diffuse_ray_depth" type="integer" value="100" />
     <input name="in_specular_weight" type="float" value="1" />
     <input name="in_specular_roughness" type="float" value="0.1" />
     <input name="in_ior" type="float" value="1.5" />
@@ -778,7 +804,7 @@
     <input name="in_glossy_level" type="float" value="0.25" />
     <input name="in_glossy_softness" type="float" value="0.05" />
     <input name="in_facing_attenuation" type="float" value="0" />
-    <input name="in_specular_ray_depth" type="integer" value="2" />
+    <input name="in_specular_ray_depth" type="integer" value="100" />
     <input name="in_rim_weight" type="float" value="1" />
     <input name="in_rim_tint" type="color3" value="1, 1, 1" />
     <input name="in_rim_blend_mode" type="string" value="Multiply" />

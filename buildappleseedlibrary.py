@@ -8,14 +8,14 @@ import sys
 import MaterialX as mx
 
 # Add appleseed to PYTHONPATH
-sys.path.append(r'E:\GIT\appleseed\appleseed\sandbox\lib\v110\Release\python2.7')
+sys.path.append(r'C:\plugins\appleseed\appleseed\sandbox\lib\vc140\Release\python')
 # Add appleseed .dll to PATH
-os.environ['PATH'] += os.pathsep + r'E:\GIT\appleseed\appleseed\sandbox\bin\v110\Release'
+os.environ['PATH'] += os.pathsep + r'C:\plugins\appleseed\appleseed\sandbox\bin\vc140\Release'
 import appleseed as asr
 
-oso_shaders_dir = r'E:\GIT\appleseed\appleseed\sandbox\shaders\appleseed'
-osl_shaders_dir = r'E:\GIT\appleseed\appleseed\src\appleseed.shaders\src\appleseed'
-osl_include_dir = r'E:\GIT\appleseed\appleseed\src\appleseed.shaders\include'
+oso_shaders_dir = r'C:\plugins\appleseed\appleseed\sandbox\shaders\appleseed'
+osl_shaders_dir = r'C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed'
+osl_include_dir = r'C:\plugins\appleseed\appleseed\src\appleseed.shaders\include'
 
 def check_multioutput(query):
     

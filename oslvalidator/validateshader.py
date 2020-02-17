@@ -4,12 +4,12 @@ import MaterialX.PyMaterialXRenderOsl as renderosl
 def validate_shader():
     validator = renderosl.create()
     validator.initialize()
-    validator.setOslCompilerExecutable('E:/GIT/appleseed/OpenShadingLanguage/package/bin/oslc.exe')
-    validator.setOslIncludePath('E:/GIT/appleseed/appleseed-materialx/libraries/appleseed/appleseed/')
-    validator.setOslTestShadeExecutable('E:/GIT/appleseed/OpenShadingLanguage/package/bin/testshade.exe')
-    validator.setOslTestRenderExecutable('E:/GIT/appleseed/OpenShadingLanguage/package/bin/testrender.exe')
+    validator.setOslCompilerExecutable('C:/plugins/appleseed/OpenShadingLanguage/package/bin/oslc.exe')
+    validator.setOslIncludePath('C:/plugins/appleseed/appleseed-materialx/libraries/appleseed/appleseed/')
+    validator.setOslTestShadeExecutable('C:/plugins/appleseed/OpenShadingLanguage/package/bin/testshade.exe')
+    validator.setOslTestRenderExecutable('C:/plugins/appleseed/OpenShadingLanguage/package/bin/testrender.exe')
     
-    validator.compileOSL('E:/GIT/appleseed/appleseed-materialx/double_shade.osl')
+    validator.compileOSL('C:/plugins/appleseed/appleseed-materialx/double_shade.osl')
     validator.setOslOutputFilePath('../oslvalidator/')
     validator.setOslShaderName('as_double_shade')  #The value is used to replace the %shader% token in the input XML scene file.
     validator.setOslShaderOutput('out_color', 'surfaceshader')

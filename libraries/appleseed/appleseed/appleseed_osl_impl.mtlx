@@ -2,7 +2,7 @@
 <materialx version="1.36">
   <!-- Implementation element -->
   <implementation name="IM_as_closure2surface" nodedef="ND_as_closure2surface"
-    file="appleseed/appleseed/as_closure2surface.osl" function="as_closure2surface" language="genosl"/>
+    file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_closure2surface.osl" function="as_closure2surface" language="genosl"/>
   <implementation name="IM_as_double_shade" nodedef="ND_as_double_shade"
-    file="appleseed/appleseed/as_double_shade.osl" function="as_double_shade" language="genosl"/>
+    file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_double_shade.osl" function="as_double_shade" language="genosl"/>
 </materialx>

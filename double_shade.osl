@@ -1,9 +1,9 @@
-#include "e:\GIT\appleseed\appleseed-materialx\python-test\..\libraries\stdlib\osl\color2.h"
-#include "e:\GIT\appleseed\appleseed-materialx\python-test\..\libraries\stdlib\osl\color4.h"
-#include "e:\GIT\appleseed\appleseed-materialx\python-test\..\libraries\stdlib\osl\matrix33.h"
-#include "e:\GIT\appleseed\appleseed-materialx\python-test\..\libraries\stdlib\osl\vector2.h"
-#include "e:\GIT\appleseed\appleseed-materialx\python-test\..\libraries\stdlib\osl\vector4.h"
-#include "e:\GIT\appleseed\appleseed-materialx\python-test\..\libraries\stdlib\osl\mx_funcs.h"
+#include "c:\plugins\appleseed\appleseed-materialx\python-test\..\libraries\stdlib\osl\color2.h"
+#include "c:\plugins\appleseed\appleseed-materialx\python-test\..\libraries\stdlib\osl\color4.h"
+#include "c:\plugins\appleseed\appleseed-materialx\python-test\..\libraries\stdlib\osl\matrix33.h"
+#include "c:\plugins\appleseed\appleseed-materialx\python-test\..\libraries\stdlib\osl\vector2.h"
+#include "c:\plugins\appleseed\appleseed-materialx\python-test\..\libraries\stdlib\osl\vector4.h"
+#include "c:\plugins\appleseed\appleseed-materialx\python-test\..\libraries\stdlib\osl\mx_funcs.h"
 
 #define M_FLOAT_EPS 0.000001
 #define true 1
@@ -16,9 +16,6 @@
 struct displacementshader { vector offset; float scale; };
 #define lightshader closure color
 
-//
-// Function to transform texture coordinates before texture sampling
-//
 vector2 mx_transform_uv(vector2 texcoord)
 {
     return texcoord;
@@ -56,7 +53,7 @@ shader as_double_shade
 [[
     string help = "Shades a different color on front or back faces.",
     string icon = "asDoubleShade.png",
-    string URL = "https://appleseed.readthedocs.io/projects/appleseed-maya/en/latest/shaders/utilities/as_double_shade.html#label-as-double-shade",
+    string URL = "https://appleseed.readthedocs.io/projects/appleseed-maya/en/latest/shaders/utilities/as_double_shade.html",
 
     string as_node_name = "asDoubleShade",
     string as_category = "utility",

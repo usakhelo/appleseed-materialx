@@ -1,0 +1,40 @@
+#include "c:\plugins\appleseed\appleseed-materialx\python-test\..\libraries\stdlib\osl\mx_funcs.h"
+
+#define M_FLOAT_EPS 0.000001
+#define true 1
+#define false 0
+#define BSDF closure color
+#define EDF closure color
+#define VDF closure color
+#define surfaceshader closure color
+#define volumeshader closure color
+struct displacementshader { vector offset; float scale; };
+#define lightshader closure color
+
+void IM_as_double_shade(color in_color, color in_color2, output color out)
+{
+    int N_backfacing_out = backfacing();
+    color N_switch_color3_out = color(0.0);
+    if (N_backfacing_out == true)
+    {
+        N_switch_color3_out = in_color2;
+    }
+    else
+    {
+        N_switch_color3_out = in_color;
+    }
+    out = N_switch_color3_out;
+}
+
+surface as_double_shade
+(
+    color in_color = color(0.944, 0.776, 0.373),
+    color in_color2 = color(0.2, 0.4, 0.8),
+    output surfaceshader out = 0
+)
+{
+    closure color null_closure = 0;
+    surfaceshader as_double_shade_out = null_closure;
+    IM_as_double_shade(in_color, in_color2, as_double_shade_out);
+    out = as_double_shade_out;
+}

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <materialx version="1.36">
   <material name="Appleseed">
-    <shaderref name="double_shade" node="as_double_shade">
+    <shaderref name="as_double_shade" node="as_double_shade">
       <bindinput name="in_color" type="color3" value="0.944, 0.776, 0.373" />
       <bindinput name="in_color2" type="color3" value="0.2, 0.4, 0.8" />
     </shaderref>

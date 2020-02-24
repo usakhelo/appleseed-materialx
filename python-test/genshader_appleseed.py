@@ -41,6 +41,8 @@ class TestGenShader(unittest.TestCase):
         searchPath = os.path.join(_fileDir, "../libraries")
         libraryPath = os.path.join(searchPath, "stdlib")
         _loadLibraries(doc, libraryPath)
+        libraryPath = os.path.join(searchPath, "pbrlib")
+        _loadLibraries(doc, libraryPath)
         libraryPath = os.path.join(searchPath, "appleseed")
         _loadLibraries(doc, libraryPath)
 
@@ -65,7 +67,7 @@ class TestGenShader(unittest.TestCase):
         context.registerSourceCodeSearchPath(mx.FilePath(searchPath))
         # Add path to find OSL include files
         context.registerSourceCodeSearchPath(mx.FilePath(os.path.join(searchPath, "stdlib/osl")))
-        context.registerSourceCodeSearchPath(mx.FilePath(os.path.join(searchPath, "/appleseed/src/appleseed")))
+        # context.registerSourceCodeSearchPath(mx.FilePath(os.path.join(searchPath, "/appleseed/src/appleseed")))
 
         print(mx.writeToXmlString(doc))
         # Test complete mode

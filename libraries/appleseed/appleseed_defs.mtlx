@@ -9,4 +9,18 @@
       <input name="in_color" type="color3" value="1, 1, 1" uiname="Front Color"  uifolder="Color"/>
       <input name="in_color2" type="color3" value="0, 0, 0" uiname="Back Color"  uifolder="Color"/>
   </nodedef>
+
+  <nodegraph name="IM_as_double_shade" nodedef="ND_as_double_shade">
+    <backfacing name="N_backfacing" type="boolean">
+    </backfacing>
+    <ifequal name="N_switch_color3" type="color3">
+      <input name="in1" type="color3" interfacename="in_color2"/>
+      <input name="in2" type="color3" interfacename="in_color"/>
+      <input name="value1" type="boolean" nodename="N_backfacing"/>
+      <input name="value2" type="boolean" value="true"/>
+    </ifequal>
+    <!-- Output -->
+    <output name="out" type="color3" nodename="N_switch_color3"/>
+  </nodegraph>
+
 </materialx>

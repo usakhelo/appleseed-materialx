@@ -19,7 +19,6 @@
       <input name="value1" type="boolean" nodename="N_backfacing"/>
       <input name="value2" type="boolean" value="true"/>
     </ifequal>
-    <!-- Output -->
     <output name="out" type="color3" nodename="N_switch_color3"/>
   </nodegraph>
 

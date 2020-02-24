@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
-<materialx version="1.36">
-  <nodedef name="ND_as_anisotropy_vector_field" type="surfaceshader" node="as_anisotropy_vector_field">
+<materialx version="1.37">
+  <nodedef name="ND_as_anisotropy_vector_field" node="as_anisotropy_vector_field">
+    <output name="out" type="surfaceshader" />
     <input name="in_rotation_angle" type="float" value="0" />
     <input name="in_color" type="color3" value="1, 1, 1" />
     <input name="in_field_mode" type="integer" value="0" />
@@ -12,7 +13,8 @@
     <input name="Bn" type="vector3" value="0, 0, 0" />
     <output name="out_anisotropy_vector" type="vector3" value="0, 0, 0" />
   </nodedef>
-  <nodedef name="ND_as_asc_cdl" type="surfaceshader" node="as_asc_cdl">
+  <nodedef name="ND_as_asc_cdl" node="as_asc_cdl">
+    <output name="out" type="surfaceshader" />
     <input name="in_color" type="color3" value="0, 0, 0" />
     <input name="in_rgb_primaries" type="string" value="sRGB/Rec.709" />
     <input name="in_slope" type="float" value="1" />
@@ -22,7 +24,7 @@
     <input name="in_clamp_output" type="integer" value="1" />
     <output name="out_outColor" type="color3" value="0, 0, 0" />
   </nodedef>
-  <nodedef name="ND_as_attributes" type="multioutput" node="as_attributes">
+  <nodedef name="ND_as_attributes" node="as_attributes">
     <output name="out_object_instance_id" type="integer" value="0" />
     <output name="out_object_instance_index" type="integer" value="0" />
     <output name="out_object_instance_name" type="string" value="" />
@@ -53,7 +55,7 @@
     <output name="out_path_ray_length" type="float" value="0" />
     <output name="out_path_ray_ior" type="float" value="0" />
   </nodedef>
-  <nodedef name="ND_as_blackbody" type="multioutput" node="as_blackbody">
+  <nodedef name="ND_as_blackbody" node="as_blackbody">
     <input name="in_incandescence_type" type="integer" value="0" />
     <input name="in_color" type="color3" value="0, 0, 0" />
     <input name="in_incandescence_amount" type="float" value="0" />
@@ -73,7 +75,8 @@
     <output name="out_matte_opacity" type="surfaceshader" />
     <output name="out_blackbody_color" type="color3" value="0, 0, 0" />
   </nodedef>
-  <nodedef name="ND_as_blend_color" type="surfaceshader" node="as_blend_color">
+  <nodedef name="ND_as_blend_color" node="as_blend_color">
+    <output name="out" type="surfaceshader" />
     <input name="in_color" type="color3" value="0, 0, 0" />
     <input name="in_weight" type="float" value="1" />
     <input name="in_color2" type="color3" value="1, 1, 1" />
@@ -82,7 +85,8 @@
     <input name="in_clamp_output" type="integer" value="0" />
     <output name="out_color" type="color3" value="0, 0, 0" />
   </nodedef>
-  <nodedef name="ND_as_blend_normal" type="surfaceshader" node="as_blend_normal">
+  <nodedef name="ND_as_blend_normal" node="as_blend_normal">
+    <output name="out" type="surfaceshader" />
     <input name="in_base_normal" type="vector3" value="0, 0, 0" />
     <input name="in_base_normal_mode" type="string" value="Unsigned" />
     <input name="in_base_normal_flip_r" type="integer" value="0" />
@@ -98,7 +102,8 @@
     <input name="Bn" type="vector3" value="0, 0, 0" />
     <output name="out_normal" type="vector3" />
   </nodedef>
-  <nodedef name="ND_as_blend_shader" type="surfaceshader" node="as_blend_shader">
+  <nodedef name="ND_as_blend_shader" node="as_blend_shader">
+    <output name="out" type="surfaceshader" />
     <input name="in_color" type="surfaceshader" />
     <input name="in_weight" type="float" value="1" />
     <input name="in_layer_visibility" type="integer" value="1" />
@@ -125,7 +130,8 @@
     <input name="in_layer_visibility7" type="integer" value="0" />
     <output name="out_color" type="surfaceshader" />
   </nodedef>
-  <nodedef name="ND_as_bump" type="surfaceshader" node="as_bump">
+  <nodedef name="ND_as_bump" node="as_bump">
+    <output name="out" type="surfaceshader" />
     <input name="in_mode" type="string" value="Bump" />
     <input name="in_bump_value" type="float" value="0" />
     <input name="in_bump_depth" type="float" value="1" />
@@ -142,10 +148,12 @@
     <input name="Bn" type="vector3" value="0, 0, 0" />
     <output name="out_normal" type="vector3" />
   </nodedef>
-  <nodedef name="ND_as_closure2surface" type="surfaceshader" node="as_closure2surface">
+  <nodedef name="ND_as_closure2surface" node="as_closure2surface">
+    <output name="out" type="surfaceshader" />
     <input name="in_input" type="surfaceshader" />
   </nodedef>
-  <nodedef name="ND_as_color_transform" type="surfaceshader" node="as_color_transform">
+  <nodedef name="ND_as_color_transform" node="as_color_transform">
+    <output name="out" type="surfaceshader" />
     <input name="in_color" type="color3" value="0.5, 0.5, 0.5" />
     <input name="in_inputSpace" type="integer" value="0" />
     <input name="in_outputSpace" type="integer" value="0" />
@@ -158,7 +166,7 @@
     <input name="in_colorManagementConfigFilePath" type="string" value="" />
     <output name="out_outColor" type="color3" value="0, 0, 0" />
   </nodedef>
-  <nodedef name="ND_as_composite_color" type="multioutput" node="as_composite_color">
+  <nodedef name="ND_as_composite_color" node="as_composite_color">
     <input name="in_color" type="color3" value="0, 0, 0" />
     <input name="in_alpha" type="float" value="1" />
     <input name="in_color2" type="color3" value="1, 1, 1" />
@@ -168,7 +176,8 @@
     <output name="out_color" type="color3" value="0, 0, 0" />
     <output name="out_alpha" type="float" value="0" />
   </nodedef>
-  <nodedef name="ND_as_create_mask" type="surfaceshader" node="as_create_mask">
+  <nodedef name="ND_as_create_mask" node="as_create_mask">
+    <output name="out" type="surfaceshader" />
     <input name="in_color" type="color3" value="1, 1, 1" />
     <input name="in_alpha" type="float" value="0" />
     <input name="in_threshold_channel" type="integer" value="0" />
@@ -179,7 +188,7 @@
     <input name="in_threshold_upper_bound" type="float" value="0.85" />
     <output name="out_result" type="float" value="0" />
   </nodedef>
-  <nodedef name="ND_as_disney_material" type="multioutput" node="as_disney_material">
+  <nodedef name="ND_as_disney_material" node="as_disney_material">
     <input name="in_color" type="color3" value="0.5, 0.5, 0.5" />
     <input name="in_subsurface_amount" type="float" value="0" />
     <input name="in_specular_amount" type="float" value="0.5" />
@@ -204,12 +213,14 @@
     <output name="out_outTransparency" type="surfaceshader" />
     <output name="out_outMatteOpacity" type="surfaceshader" />
   </nodedef>
-  <nodedef name="ND_as_double_shade" type="surfaceshader" node="as_double_shade">
+  <nodedef name="ND_as_double_shade" node="as_double_shade">
+    <output name="out" type="surfaceshader" />
     <input name="in_color" type="color3" value="1, 1, 1" />
     <input name="in_color2" type="color3" value="0, 0, 0" />
     <output name="out_color" type="color3" value="0, 0, 0" />
   </nodedef>
-  <nodedef name="ND_as_falloff_angle" type="surfaceshader" node="as_falloff_angle">
+  <nodedef name="ND_as_falloff_angle" node="as_falloff_angle">
+    <output name="out" type="surfaceshader" />
     <input name="in_vector_1" type="vector3" value="0, 1, 0" />
     <input name="in_normalize_input_1" type="integer" value="0" />
     <input name="in_vector_2" type="vector3" />
@@ -219,7 +230,7 @@
     <input name="in_smooth_function" type="integer" value="0" />
     <output name="out_result" type="float" value="0" />
   </nodedef>
-  <nodedef name="ND_as_fresnel" type="multioutput" node="as_fresnel">
+  <nodedef name="ND_as_fresnel" node="as_fresnel">
     <input name="in_fresnel_type" type="string" value="Simple Dielectric" />
     <input name="in_ior" type="float" value="1.37" />
     <input name="in_face_tint" type="color3" value="0.85, 0.21, 0.05" />
@@ -231,7 +242,7 @@
     <output name="out_color" type="color3" value="0, 0, 0" />
     <output name="out_alpha" type="float" value="1" />
   </nodedef>
-  <nodedef name="ND_as_glass" type="multioutput" node="as_glass">
+  <nodedef name="ND_as_glass" node="as_glass">
     <input name="in_surface_transmittance" type="color3" value="1, 1, 1" />
     <input name="in_transmittance_amount" type="float" value="0.99" />
     <input name="in_reflection_tint" type="color3" value="1, 1, 1" />
@@ -258,7 +269,7 @@
     <output name="out_outTransparency" type="surfaceshader" />
     <output name="out_outMatteOpacity" type="surfaceshader" />
   </nodedef>
-  <nodedef name="ND_as_globals" type="multioutput" node="as_globals">
+  <nodedef name="ND_as_globals" node="as_globals">
     <input name="Pref" type="vector3" />
     <input name="Nref" type="vector3" />
     <output name="out_world_P" type="vector3" />
@@ -290,7 +301,8 @@
     <output name="out_dtime" type="float" />
     <output name="out_world_dPdtime" type="vector3" />
   </nodedef>
-  <nodedef name="ND_as_hair_material" type="surfaceshader" node="as_hair_material">
+  <nodedef name="ND_as_hair_material" node="as_hair_material">
+    <output name="out" type="surfaceshader" />
     <input name="in_reflectance" type="color3" value="0, 0, 0" />
     <input name="in_melanin" type="float" value="0.8" />
     <input name="in_melanin_redness" type="float" value="0" />
@@ -301,7 +313,7 @@
     <input name="in_maximum_ray_depth" type="integer" value="100" />
     <output name="out_outColor" type="surfaceshader" />
   </nodedef>
-  <nodedef name="ND_as_id_manifold" type="multioutput" node="as_id_manifold">
+  <nodedef name="ND_as_id_manifold" node="as_id_manifold">
     <input name="in_manifold_type" type="integer" value="0" />
     <input name="in_expression" type="string" value="" />
     <input name="in_domain" type="integer" value="0" />
@@ -311,7 +323,8 @@
     <output name="out_outID" type="color3" value="0, 0, 0" />
     <output name="out_outGreyscale" type="float" value="0" />
   </nodedef>
-  <nodedef name="ND_as_invert_color" type="surfaceshader" node="as_invert_color">
+  <nodedef name="ND_as_invert_color" node="as_invert_color">
+    <output name="out" type="surfaceshader" />
     <input name="in_color" type="color3" value="0, 0, 0" />
     <input name="in_color_model" type="string" value="RGB" />
     <input name="in_invert_channel_x" type="integer" value="0" />
@@ -319,7 +332,8 @@
     <input name="in_invert_channel_z" type="integer" value="0" />
     <output name="out_outColor" type="color3" value="0, 0, 0" />
   </nodedef>
-  <nodedef name="ND_as_luminance" type="surfaceshader" node="as_luminance">
+  <nodedef name="ND_as_luminance" node="as_luminance">
+    <output name="out" type="surfaceshader" />
     <input name="in_color" type="color3" value="0.5, 0.5, 0.5" />
     <input name="in_deriveFromMayaCMS" type="integer" value="1" />
     <input name="in_inputColorSpace" type="integer" value="0" />
@@ -338,7 +352,7 @@
     <input name="in_colorManagementConfigFilePath" type="string" value="" />
     <output name="out_result" type="float" value="0" />
   </nodedef>
-  <nodedef name="ND_as_manifold2D" type="multioutput" node="as_manifold2D">
+  <nodedef name="ND_as_manifold2D" node="as_manifold2D">
     <input name="in_uv_coord" type="floatarray" />
     <input name="in_uv_filter_size" type="floatarray" value="-1, -1" />
     <input name="in_bypass_uv" type="integer" value="0" />
@@ -364,7 +378,7 @@
     <output name="out_uvcoord" type="floatarray" value="0, 0" />
     <output name="out_uvcoord_filter" type="floatarray" value="-1, -1" />
   </nodedef>
-  <nodedef name="ND_as_matte" type="multioutput" node="as_matte">
+  <nodedef name="ND_as_matte" node="as_matte">
     <input name="in_color" type="surfaceshader" />
     <input name="in_enable_matte" type="integer" value="1" />
     <input name="in_matte_opacity" type="float" value="0" />
@@ -372,7 +386,7 @@
     <output name="out_outColor" type="surfaceshader" />
     <output name="out_outMatteOpacity" type="surfaceshader" />
   </nodedef>
-  <nodedef name="ND_as_metal" type="multioutput" node="as_metal">
+  <nodedef name="ND_as_metal" node="as_metal">
     <input name="in_face_reflectance" type="color3" value="0.96, 0.8, 0.05" />
     <input name="in_edge_reflectance" type="color3" value="1, 1, 1" />
     <input name="in_distribution" type="integer" value="0" />
@@ -393,7 +407,7 @@
     <output name="out_outColor" type="surfaceshader" />
     <output name="out_outMatteOpacity" type="surfaceshader" />
   </nodedef>
-  <nodedef name="ND_as_noise2d" type="multioutput" node="as_noise2d">
+  <nodedef name="ND_as_noise2d" node="as_noise2d">
     <input name="in_color1" type="color3" value="0, 0, 0" />
     <input name="in_color2" type="color3" value="1, 1, 1" />
     <input name="in_contrast" type="float" value="1" />
@@ -430,7 +444,7 @@
     <output name="out_outColor" type="color3" value="0, 0, 0" />
     <output name="out_outAlpha" type="float" value="1" />
   </nodedef>
-  <nodedef name="ND_as_noise3d" type="multioutput" node="as_noise3d">
+  <nodedef name="ND_as_noise3d" node="as_noise3d">
     <input name="in_color1" type="color3" value="0, 0, 0" />
     <input name="in_color2" type="color3" value="1, 1, 1" />
     <input name="in_contrast" type="float" value="1" />
@@ -468,7 +482,7 @@
     <output name="out_outColor" type="color3" value="0, 0, 0" />
     <output name="out_outAlpha" type="float" value="1" />
   </nodedef>
-  <nodedef name="ND_as_plastic" type="multioutput" node="as_plastic">
+  <nodedef name="ND_as_plastic" node="as_plastic">
     <input name="in_color" type="color3" value="0.5, 0.5, 0.5" />
     <input name="in_diffuse_weight" type="float" value="1" />
     <input name="in_scattering" type="float" value="0" />
@@ -488,7 +502,8 @@
     <output name="out_outTransparency" type="surfaceshader" />
     <output name="out_outMatteOpacity" type="surfaceshader" />
   </nodedef>
-  <nodedef name="ND_as_ray_switch" type="surfaceshader" node="as_ray_switch">
+  <nodedef name="ND_as_ray_switch" node="as_ray_switch">
+    <output name="out" type="surfaceshader" />
     <input name="in_color" type="color3" value="1, 1, 1" />
     <input name="in_color_light" type="color3" value="0, 0, 0" />
     <input name="in_color_shadow" type="color3" value="0, 0, 0" />
@@ -499,7 +514,8 @@
     <input name="in_color_subsurface" type="color3" value="0, 0, 0" />
     <output name="out_color" type="color3" value="0, 0, 0" />
   </nodedef>
-  <nodedef name="ND_as_ray_switch_surface" type="surfaceshader" node="as_ray_switch_surface">
+  <nodedef name="ND_as_ray_switch_surface" node="as_ray_switch_surface">
+    <output name="out" type="surfaceshader" />
     <input name="in_material_camera" type="surfaceshader" />
     <input name="in_material_light" type="surfaceshader" />
     <input name="in_material_shadow" type="surfaceshader" />
@@ -510,7 +526,7 @@
     <input name="in_material_subsurface" type="surfaceshader" />
     <output name="out_color" type="surfaceshader" />
   </nodedef>
-  <nodedef name="ND_as_sbs_pbrmaterial" type="multioutput" node="as_sbs_pbrmaterial">
+  <nodedef name="ND_as_sbs_pbrmaterial" node="as_sbs_pbrmaterial">
     <input name="in_ambientOcclusion" type="float" value="1" />
     <input name="in_baseColor" type="color3" value="0.5, 0.5, 0.5" />
     <input name="in_emissiveColor" type="color3" value="0, 0, 0" />
@@ -539,7 +555,7 @@
     <output name="out_outTransparency" type="surfaceshader" />
     <output name="out_outMatteOpacity" type="surfaceshader" />
   </nodedef>
-  <nodedef name="ND_as_space_transform" type="multioutput" node="as_space_transform">
+  <nodedef name="ND_as_space_transform" node="as_space_transform">
     <input name="in_point" type="vector3" value="0, 0, 0" />
     <input name="in_normal" type="vector3" value="0, 0, 0" />
     <input name="in_vector" type="vector3" value="0, 0, 0" />
@@ -551,7 +567,7 @@
     <output name="out_transformed_vector" type="vector3" value="0, 0, 0" />
     <output name="out_transform_matrix" type="matrix44" />
   </nodedef>
-  <nodedef name="ND_as_standard_surface" type="multioutput" node="as_standard_surface">
+  <nodedef name="ND_as_standard_surface" node="as_standard_surface">
     <input name="in_diffuse_weight" type="float" value="1" />
     <input name="in_color" type="color3" value="0.5, 0.5, 0.5" />
     <input name="in_diffuse_roughness" type="float" value="0.1" />
@@ -601,7 +617,7 @@
     <output name="out_outTransparency" type="surfaceshader" />
     <output name="out_outMatteOpacity" type="surfaceshader" />
   </nodedef>
-  <nodedef name="ND_as_subsurface" type="multioutput" node="as_subsurface">
+  <nodedef name="ND_as_subsurface" node="as_subsurface">
     <input name="in_sss_profile" type="integer" value="0" />
     <input name="in_color" type="color3" value="0.87, 0.31, 0.12" />
     <input name="in_sss_amount" type="float" value="1" />
@@ -627,7 +643,7 @@
     <output name="out_outColor" type="surfaceshader" />
     <output name="out_outMatteOpacity" type="surfaceshader" />
   </nodedef>
-  <nodedef name="ND_as_surface_luminance" type="multioutput" node="as_surface_luminance">
+  <nodedef name="ND_as_surface_luminance" node="as_surface_luminance">
     <input name="in_color" type="surfaceshader" />
     <input name="in_evaluation_mode" type="string" value="diffuse+specular" />
     <input name="in_clamp_input" type="integer" value="0" />
@@ -650,7 +666,8 @@
     <output name="out_result" type="float" value="0" />
     <output name="out_color" type="surfaceshader" />
   </nodedef>
-  <nodedef name="ND_as_switch_surface" type="surfaceshader" node="as_switch_surface">
+  <nodedef name="ND_as_switch_surface" node="as_switch_surface">
+    <output name="out" type="surfaceshader" />
     <input name="in_color" type="surfaceshader" />
     <input name="in_color1" type="surfaceshader" />
     <input name="in_color2" type="surfaceshader" />
@@ -667,7 +684,8 @@
     <input name="in_seed" type="integer" value="51966" />
     <output name="out_outColor" type="surfaceshader" />
   </nodedef>
-  <nodedef name="ND_as_switch_texture" type="surfaceshader" node="as_switch_texture">
+  <nodedef name="ND_as_switch_texture" node="as_switch_texture">
+    <output name="out" type="surfaceshader" />
     <input name="in_color" type="color3" value="0.9, 0.2, 0.1" />
     <input name="in_color1" type="color3" value="0, 0, 0" />
     <input name="in_color2" type="color3" value="0, 0, 0" />
@@ -683,7 +701,7 @@
     <input name="in_seed" type="integer" value="51966" />
     <output name="out_outColor" type="color3" value="0, 0, 0" />
   </nodedef>
-  <nodedef name="ND_as_swizzle" type="multioutput" node="as_swizzle">
+  <nodedef name="ND_as_swizzle" node="as_swizzle">
     <input name="in_color" type="color3" value="1, 1, 1" />
     <input name="in_alpha" type="float" value="1" />
     <input name="in_red_channel" type="integer" value="0" />
@@ -705,7 +723,7 @@
     <output name="out_alpha" type="float" value="1" />
     <output name="out_vector" type="vector3" value="0, 0, 0" />
   </nodedef>
-  <nodedef name="ND_as_texture" type="multioutput" node="as_texture">
+  <nodedef name="ND_as_texture" node="as_texture">
     <input name="in_filename" type="string" value="" />
     <input name="in_atlas_type" type="integer" value="0" />
     <input name="in_color" type="color3" value="0, 0, 0" />
@@ -728,11 +746,13 @@
     <output name="out_alpha" type="float" value="1" />
     <output name="out_channel" type="float" value="0" />
   </nodedef>
-  <nodedef name="ND_as_texture2surface" type="surfaceshader" node="as_texture2surface">
+  <nodedef name="ND_as_texture2surface" node="as_texture2surface">
+    <output name="out" type="surfaceshader" />
     <input name="in_color" type="color3" value="1, 1, 1" />
     <input name="in_scalar" type="float" value="1" />
   </nodedef>
-  <nodedef name="ND_as_texture3d" type="surfaceshader" node="as_texture3d">
+  <nodedef name="ND_as_texture3d" node="as_texture3d">
+    <output name="out" type="surfaceshader" />
     <input name="in_filename" type="string" value="" />
     <input name="in_starting_channel" type="integer" value="0" />
     <input name="in_color" type="color3" value="0, 0, 0" />
@@ -752,7 +772,7 @@
     <input name="in_placement_matrix" type="matrix44" />
     <output name="out_color" type="color3" value="0, 0, 0" />
   </nodedef>
-  <nodedef name="ND_as_texture_info" type="multioutput" node="as_texture_info">
+  <nodedef name="ND_as_texture_info" node="as_texture_info">
     <input name="in_texture_file" type="string" value="" />
     <output name="out_average_color" type="color3" value="0, 0, 0" />
     <output name="out_average_alpha" type="float" value="1" />
@@ -768,7 +788,7 @@
     <output name="out_world_to_camera" type="matrix44" />
     <output name="out_world_to_screen" type="matrix44" />
   </nodedef>
-  <nodedef name="ND_as_toon" type="multioutput" node="as_toon">
+  <nodedef name="ND_as_toon" node="as_toon">
     <input name="in_incandescence_weight" type="float" value="0" />
     <input name="in_incandescence_attenuation" type="float" value="0.2" />
     <input name="in_incandescence_tint" type="color3" value="1, 1, 1" />
@@ -831,7 +851,7 @@
     <output name="out_outTransparency" type="surfaceshader" />
     <output name="out_outMatteOpacity" type="surfaceshader" />
   </nodedef>
-  <nodedef name="ND_as_triplanar" type="multioutput" node="as_triplanar">
+  <nodedef name="ND_as_triplanar" node="as_triplanar">
     <input name="in_blend_mode" type="string" value="Color" />
     <input name="in_blend_softness" type="float" value="0.1" />
     <input name="in_surface_point" type="vector3" />
@@ -894,7 +914,7 @@
     <output name="out_alpha" type="float" value="1" />
     <output name="out_normal" type="vector3" value="0, 0, 0" />
   </nodedef>
-  <nodedef name="ND_as_vary_color" type="multioutput" node="as_vary_color">
+  <nodedef name="ND_as_vary_color" node="as_vary_color">
     <input name="in_color" type="color3" value="0, 0, 0" />
     <input name="in_color_mode" type="integer" value="0" />
     <input name="in_manifold_type" type="integer" value="0" />
@@ -916,7 +936,7 @@
     <output name="out_outID" type="color3" value="0, 0, 0" />
     <output name="out_outGreyscale" type="float" value="0" />
   </nodedef>
-  <nodedef name="ND_as_voronoi2d" type="multioutput" node="as_voronoi2d">
+  <nodedef name="ND_as_voronoi2d" node="as_voronoi2d">
     <input name="in_color1" type="color3" value="1, 0.3, 0.05" />
     <input name="in_color2" type="color3" value="0.1, 0.3, 0.9" />
     <input name="in_contrast" type="float" value="0.5" />
@@ -938,7 +958,7 @@
     <output name="out_outPositions" type="vector3rarray" />
     <output name="out_outIDs" type="color3rarray" />
   </nodedef>
-  <nodedef name="ND_as_voronoi3d" type="multioutput" node="as_voronoi3d">
+  <nodedef name="ND_as_voronoi3d" node="as_voronoi3d">
     <input name="in_color1" type="color3" value="1, 0.3, 0.05" />
     <input name="in_color2" type="color3" value="0.1, 0.3, 0.9" />
     <input name="in_contrast" type="float" value="0.5" />

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.36">
+<materialx version="1.37">
   <implementation name="IM_as_anisotropy_vector_field" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_anisotropy_vector_field.osl" function="as_anisotropy_vector_field" language="genosl" nodedef="ND_as_anisotropy_vector_field" />
   <implementation name="IM_as_asc_cdl" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_asc_cdl.osl" function="as_asc_cdl" language="genosl" nodedef="ND_as_asc_cdl" />
   <implementation name="IM_as_attributes" file="C:\plugins\appleseed\appleseed\src\appleseed.shaders\src\appleseed\as_attributes.osl" function="as_attributes" language="genosl" nodedef="ND_as_attributes" />

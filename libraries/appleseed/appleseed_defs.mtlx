@@ -5,7 +5,7 @@
       <input name="in_input" type="surfaceshader" uiname="Input" uifolder="surface"/>
   </nodedef>
   <!-- as_double_shade -->
-  <nodedef name="ND_as_double_shade" node="as_double_shade" type="surfaceshader">
+  <nodedef name="ND_as_double_shade" node="as_double_shade" type="color3">
       <input name="in_color" type="color3" value="1, 1, 1" uiname="Front Color"  uifolder="Color"/>
       <input name="in_color2" type="color3" value="0, 0, 0" uiname="Back Color"  uifolder="Color"/>
   </nodedef>

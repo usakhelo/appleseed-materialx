@@ -1,4 +1,11 @@
-#include "c:\plugins\appleseed\appleseed-materialx\python-test\..\libraries\stdlib\osl\mx_funcs.h"
+
+struct color2
+{
+    float r;
+    float a;
+};
+
+// #include "mx_funcs.h"
 
 #define M_FLOAT_EPS 0.000001
 #define true 1
@@ -26,15 +33,15 @@ void IM_as_double_shade(color in_color, color in_color2, output color out)
     out = N_switch_color3_out;
 }
 
-surface as_double_shade
+shader as_double_shade
 (
     color in_color = color(0.944, 0.776, 0.373),
     color in_color2 = color(0.2, 0.4, 0.8),
-    output surfaceshader out = 0
+    output color out = color(0.0)
 )
 {
-    closure color null_closure = 0;
-    surfaceshader as_double_shade_out = null_closure;
+    color2 cc = color2(1.0, 1.0);
+    color as_double_shade_out = color(0.0);
     IM_as_double_shade(in_color, in_color2, as_double_shade_out);
     out = as_double_shade_out;
 }

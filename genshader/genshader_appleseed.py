@@ -63,6 +63,7 @@ def generateOslShader(mtlx_file):
     # Add path to find all source code snippets
     context.registerSourceCodeSearchPath(mx.FilePath(searchPath))
     # Add path to find OSL include files
+    context.registerSourceCodeSearchPath('C:/plugins/appleseed/windows-deps/stage/vc140/osl-release/shaders/MaterialX')
     # context.registerSourceCodeSearchPath(mx.FilePath(os.path.join(searchPath, "stdlib/osl")))
 
     print(mx.writeToXmlString(doc))

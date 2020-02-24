@@ -1,11 +1,4 @@
-
-struct color2
-{
-    float r;
-    float a;
-};
-
-// #include "mx_funcs.h"
+#include "C:\plugins\appleseed\windows-deps\stage\vc140\osl-release\shaders\MaterialX\mx_funcs.h"
 
 #define M_FLOAT_EPS 0.000001
 #define true 1
@@ -40,7 +33,6 @@ shader as_double_shade
     output color out = color(0.0)
 )
 {
-    color2 cc = color2(1.0, 1.0);
     color as_double_shade_out = color(0.0);
     IM_as_double_shade(in_color, in_color2, as_double_shade_out);
     out = as_double_shade_out;

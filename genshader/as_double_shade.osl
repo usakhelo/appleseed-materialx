@@ -1,4 +1,4 @@
-#include "C:\plugins\appleseed\windows-deps\stage\vc140\osl-release\shaders\MaterialX\mx_funcs.h"
+#include "mx_funcs.h"
 
 #define M_FLOAT_EPS 0.000001
 #define true 1

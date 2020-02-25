@@ -4,9 +4,7 @@ import MaterialX.PyMaterialXRenderOsl as renderosl
 
 def validate_shader():
     validator = renderosl.OslRenderer.create()
-    # validator.setOslIncludePath('C:/plugins/appleseed/appleseed-materialx/libraries/appleseed/')
-    validator.setOslIncludePath('C:/plugins/appleseed/windows-deps/stage/vc140/osl-release/shaders')
-    # validator.setOslIncludePath('C:/plugins/appleseed/appleseed/src/appleseed.shaders/include')
+    validator.setOslIncludePath('C:/plugins/appleseed/appleseed-materialx/libraries/stdlib/osl')
     validator.setOslCompilerExecutable('C:/plugins/appleseed/windows-deps/stage/vc140/osl-release/bin/oslc.exe')
     # validator.setOslTestShadeExecutable('C:/plugins/appleseed/OpenShadingLanguage/package/bin/testshade.exe')
     # validator.setOslTestRenderExecutable('C:/plugins/appleseed/OpenShadingLanguage/package/bin/testrender.exe')
